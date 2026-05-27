@@ -1,0 +1,114 @@
+/* =====================================================================
+   SERVICES PAGE — services.html
+   ===================================================================== */
+
+body.services-page { background: var(--midnight); }
+
+body.services-page .nav-link.active { color: #fff !important; }
+body.services-page .nav-link.active::after { transform: scaleX(1); background: var(--ice); }
+body.services-page .story-section::before,
+body.services-page .story-section::after { height: 210px; }
+body.services-page .hero-section::before { display: none; }
+body.services-page .section-bg { filter: saturate(1.02) brightness(0.9); }
+
+/* =====================================================================
+   POZADINSKE SLIKE
+   ===================================================================== */
+body.services-page .svc-hero     .section-bg { background-image: url("../assets/services-hero.png"); }
+body.services-page .svc-overview .section-bg { background-image: url("../assets/services-overview.png"); }
+body.services-page .svc-cards    .section-bg { background-image: url("../assets/services-cards.png"); }
+body.services-page .svc-process  .section-bg { background-image: url("../assets/services-process.png"); }
+body.services-page .svc-cta      .section-bg { background-image: url("../assets/services-cta.png"); }
+
+body.services-page .svc-cta .section-overlay {
+  background:
+    radial-gradient(ellipse at 50% 46%, rgba(6, 7, 13, 0.74), rgba(6, 7, 13, 0.42) 46%, rgba(6, 7, 13, 0.58) 100%),
+    linear-gradient(180deg, rgba(6, 7, 13, 0.6), transparent 24%, rgba(6, 7, 13, 0.62) 100%);
+}
+
+/* =====================================================================
+   HERO —
+   ===================================================================== */
+body.services-page .svc-chip {
+  position: absolute;
+  right: 7vw;
+  bottom: 16vh;
+  z-index: 4;
+  max-width: 300px;
+  padding: 18px 20px;
+  animation: svcFloat 7s ease-in-out infinite;
+}
+body.services-page .svc-chip small {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ice);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+body.services-page .svc-chip strong {
+  display: block;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+@keyframes svcFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* =====================================================================
+   VREDNOST —
+   ===================================================================== */
+body.services-page .svc-benefits { display: grid; gap: 14px; margin-top: 30px; max-width: 620px; }
+body.services-page .svc-benefit {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 20px 22px;
+}
+body.services-page .svc-benefit b {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--ice);
+  line-height: 1;
+}
+body.services-page .svc-benefit h3 { font-size: 1.06rem; color: #fff; margin: 0 0 4px; }
+body.services-page .svc-benefit p { margin: 0; color: var(--ink-soft); font-size: 0.94rem; line-height: 1.55; }
+
+/* =====================================================================
+   KONTAKT FORMA — 
+   ===================================================================== */
+body.services-page .svc-form { max-width: 760px; margin: 36px auto 0; }
+body.services-page .form-select {
+  color: #fff;
+  background: rgba(6, 7, 13, 0.5);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-md);
+  padding: 13px 16px;
+  font-size: 0.96rem;
+}
+body.services-page .form-select:focus {
+  color: #fff;
+  background: rgba(6, 7, 13, 0.7);
+  border-color: rgba(160, 208, 240, 0.6);
+  box-shadow: 0 0 0 0.22rem rgba(160, 208, 240, 0.1);
+}
+body.services-page .form-select option { background: var(--navy); color: #fff; }
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+@media (max-width: 1199px) {
+  body.services-page .svc-chip { display: none; }
+}
+@media (max-width: 991px) {
+  body.services-page .story-section::before,
+  body.services-page .story-section::after { height: 120px; }
+}
+@media (max-width: 575px) {
+  body.services-page .svc-benefit { grid-template-columns: 1fr; gap: 8px; }
+}

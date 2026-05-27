@@ -1,0 +1,332 @@
+/* =====================================================================
+   PROCESS PAGE — process.html
+   Same logic as previous page, same component system as landing.
+   Background is intentionally a bit less vibrant.
+   ===================================================================== */
+
+body.process-page {
+  --process-cyan: #42c7ff;
+  --process-violet: #b080ff;
+  --process-pink: #ff8acb;
+  --process-soft: rgba(234, 246, 255, 0.82);
+  --process-muted: rgba(191, 215, 242, 0.76);
+  background: var(--midnight);
+}
+
+body.process-page .nav-link.active {
+  color: #fff !important;
+}
+
+body.process-page .nav-link.active::after {
+  transform: scaleX(1);
+  background: var(--process-cyan);
+}
+
+/* SECTION SYSTEM */
+
+body.process-page .process-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+body.process-page .process-section .section-bg {
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  filter: saturate(0.84) contrast(1.03) brightness(0.82);
+  opacity: 1;
+}
+
+body.process-page .process-section::before,
+body.process-page .process-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 190px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+body.process-page .process-section::before {
+  top: 0;
+  background: linear-gradient(180deg, rgba(6, 7, 13, 0.9), transparent);
+}
+
+body.process-page .process-section::after {
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(6, 7, 13, 0.95), transparent);
+}
+
+body.process-page .section-overlay {
+  background:
+    radial-gradient(circle at 24% 48%, rgba(66, 199, 255, 0.06), transparent 34%),
+    linear-gradient(
+      90deg,
+      rgba(6, 7, 13, 0.8),
+      rgba(6, 7, 13, 0.44) 48%,
+      rgba(6, 7, 13, 0.18)
+    );
+}
+
+body.process-page .section-overlay.stronger {
+  background:
+    radial-gradient(circle at 50% 58%, rgba(66, 199, 255, 0.05), transparent 42%),
+    linear-gradient(
+      180deg,
+      rgba(6, 7, 13, 0.84),
+      rgba(6, 7, 13, 0.62) 50%,
+      rgba(6, 7, 13, 0.9)
+    );
+}
+
+/* BACKGROUNDS */
+
+body.process-page .process-hero .section-bg {
+  background-image: url("../assets/hero-scene.png");
+}
+
+body.process-page .process-discovery .section-bg {
+  background-image: url("../assets/value-scene.png");
+}
+
+body.process-page .process-roadmap .section-bg {
+  background-image: url("../assets/showcase-scene.png");
+}
+
+body.process-page .process-build .section-bg {
+  background-image: url("../assets/services-scene.png");
+}
+
+body.process-page .process-contact .section-bg {
+  background-image: url("../assets/contact-scene.png");
+}
+
+/* HERO */
+
+body.process-page .hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+body.process-page .hero-chips .feature-chip {
+  padding-inline: 18px;
+}
+
+/* SECTION HEAD */
+
+body.process-page .section-head {
+  max-width: 860px;
+  margin-inline: auto;
+  margin-bottom: clamp(70px, 12vh, 130px);
+}
+
+body.process-page .section-head p {
+  max-width: 690px;
+  margin: 18px auto 0;
+  color: var(--process-soft);
+  font-size: 1.05rem;
+  line-height: 1.78;
+}
+
+/* DISCOVERY */
+
+body.process-page .process-discovery {
+  padding-block: clamp(110px, 13vh, 160px);
+}
+
+body.process-page .process-card {
+  min-height: 320px;
+  padding: 30px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+body.process-page .process-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(160, 208, 240, 0.36);
+  box-shadow:
+    0 24px 52px rgba(0, 0, 0, 0.24),
+    0 0 28px rgba(66, 199, 255, 0.08);
+}
+
+body.process-page .process-card-number {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: var(--process-cyan);
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+body.process-page .process-card h3 {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+body.process-page .process-card p {
+  margin: 0;
+  color: var(--process-muted);
+  line-height: 1.72;
+}
+
+/* ROADMAP */
+
+body.process-page .process-roadmap {
+  padding-block: clamp(110px, 13vh, 160px);
+}
+
+/* BUILD */
+
+body.process-page .process-build {
+  padding-block: clamp(110px, 13vh, 160px);
+}
+
+body.process-page .process-build .section-bg {
+  filter: saturate(0.8) contrast(1.03) brightness(0.8);
+}
+
+body.process-page .deliverable-card {
+  min-height: 340px;
+  padding: 34px;
+  border-radius: 34px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+body.process-page .deliverable-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(160, 208, 240, 0.38);
+  box-shadow:
+    0 24px 52px rgba(0, 0, 0, 0.24),
+    0 0 28px rgba(66, 199, 255, 0.08);
+}
+
+body.process-page .deliverable-index {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: var(--process-cyan);
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+body.process-page .deliverable-card h3 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: clamp(1.6rem, 2.3vw, 2.2rem);
+  letter-spacing: -0.045em;
+}
+
+body.process-page .deliverable-card p {
+  margin: 0;
+  color: var(--process-muted);
+  line-height: 1.74;
+}
+
+/* CONTACT */
+
+body.process-page .process-contact {
+  padding-block: clamp(110px, 13vh, 160px);
+}
+
+body.process-page .process-contact .section-bg {
+  filter: saturate(0.82) contrast(1.03) brightness(0.82);
+}
+
+body.process-page .section-copy {
+  margin-top: 24px;
+  color: var(--process-soft);
+  font-size: 1.05rem;
+  line-height: 1.78;
+}
+
+body.process-page .contact-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+body.process-page .contact-benefits span {
+  display: inline-flex;
+  padding: 9px 14px;
+  border: 1px solid rgba(160, 208, 240, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(234, 246, 255, 0.84);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+body.process-page .contact-form {
+  padding: 34px;
+  border-radius: 34px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1199px) {
+  body.process-page .section-head {
+    margin-bottom: 72px;
+  }
+}
+
+@media (max-width: 991px) {
+  body.process-page .process-section {
+    min-height: auto;
+  }
+
+  body.process-page .section-overlay,
+  body.process-page .section-overlay.stronger {
+    background: rgba(6, 7, 13, 0.46);
+  }
+}
+
+@media (max-width: 767px) {
+  body.process-page h1 {
+    max-width: 100%;
+    font-size: clamp(2.35rem, 12vw, 3.7rem);
+  }
+
+  body.process-page h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  body.process-page .hero-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  body.process-page .hero-chips {
+    gap: 10px;
+  }
+
+  body.process-page .process-card,
+  body.process-page .deliverable-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  body.process-page .contact-form {
+    padding: 24px;
+  }
+}

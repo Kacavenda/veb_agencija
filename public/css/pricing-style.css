@@ -1,0 +1,350 @@
+/* =====================================================================
+   PRICING PAGE - pricing.html
+   Uses same components as index.html.
+   No floating panels between scenes.
+   ===================================================================== */
+
+body.pricing-page {
+  --pkg-cyan: #42c7ff;
+  --pkg-violet: #b080ff;
+  --pkg-pink: #ff8acb;
+  --pkg-soft: rgba(234, 246, 255, 0.82);
+  --pkg-muted: rgba(191, 215, 242, 0.76);
+  background: var(--midnight);
+}
+
+body.pricing-page .nav-link.active {
+  color: #fff !important;
+}
+
+body.pricing-page .nav-link.active::after {
+  transform: scaleX(1);
+  background: var(--pkg-cyan);
+}
+
+/* SCENE CALIBRATION */
+
+body.pricing-page .pricing-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+body.pricing-page .pricing-section .section-bg {
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  filter: saturate(1.04) contrast(1.04) brightness(0.9);
+  opacity: 1;
+}
+
+body.pricing-page .pricing-section::before,
+body.pricing-page .pricing-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 190px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+body.pricing-page .pricing-section::before {
+  top: 0;
+  background: linear-gradient(180deg, rgba(6, 7, 13, 0.88), transparent);
+}
+
+body.pricing-page .pricing-section::after {
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(6, 7, 13, 0.94), transparent);
+}
+
+body.pricing-page .section-overlay {
+  background:
+    radial-gradient(circle at 24% 48%, rgba(66, 199, 255, 0.08), transparent 34%),
+    linear-gradient(
+      90deg,
+      rgba(6, 7, 13, 0.78),
+      rgba(6, 7, 13, 0.38) 48%,
+      rgba(6, 7, 13, 0.14)
+    );
+}
+
+body.pricing-page .section-overlay.stronger {
+  background:
+    radial-gradient(circle at 50% 60%, rgba(66, 199, 255, 0.08), transparent 42%),
+    linear-gradient(
+      180deg,
+      rgba(6, 7, 13, 0.82),
+      rgba(6, 7, 13, 0.58) 50%,
+      rgba(6, 7, 13, 0.88)
+    );
+}
+
+/* BACKGROUNDS — SAME AS INDEX */
+
+body.pricing-page .pricing-hero .section-bg {
+  background-image: url("../assets/hero-scene.png");
+}
+
+body.pricing-page .pricing-packages .section-bg {
+  background-image: url("../assets/value-scene.png");
+}
+
+body.pricing-page .pricing-compare .section-bg {
+  background-image: url("../assets/services-scene.png");
+}
+
+body.pricing-page .pricing-process .section-bg {
+  background-image: url("../assets/showcase-scene.png");
+}
+
+body.pricing-page .pricing-contact .section-bg {
+  background-image: url("../assets/contact-scene.png");
+}
+
+/* PACKAGES */
+
+body.pricing-page .pricing-packages {
+  padding-block: clamp(110px, 13vh, 160px);
+}
+
+body.pricing-page .section-head {
+  max-width: 850px;
+  margin-inline: auto;
+  margin-bottom: clamp(70px, 12vh, 130px);
+}
+
+body.pricing-page .section-head p {
+  max-width: 660px;
+  margin: 18px auto 0;
+  color: var(--pkg-soft);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+body.pricing-page .pricing-packages-row {
+  position: relative;
+  z-index: 3;
+}
+
+/* COMPARE — SAME LOGIC AS LANDING PAGE */
+
+body.pricing-page .pricing-compare {
+  padding-block: clamp(110px, 13vh, 160px);
+}
+
+body.pricing-page .pricing-compare .section-bg {
+  filter: saturate(1.08) contrast(1.04) brightness(0.9);
+  background-position: center;
+}
+
+body.pricing-page .pricing-compare .section-overlay {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(66, 199, 255, 0.08), transparent 38%),
+    linear-gradient(
+      180deg,
+      rgba(6, 7, 13, 0.82),
+      rgba(6, 7, 13, 0.5) 48%,
+      rgba(6, 7, 13, 0.84)
+    );
+}
+
+body.pricing-page .pricing-compare-row {
+  position: relative;
+  z-index: 3;
+  margin-top: clamp(70px, 11vh, 120px);
+}
+
+body.pricing-page .pricing-compare-card {
+  min-height: 420px;
+  padding: 34px;
+  border-radius: 34px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+body.pricing-page .pricing-compare-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(160, 208, 240, 0.42);
+  box-shadow:
+    0 22px 54px rgba(0, 0, 0, 0.24),
+    0 0 34px rgba(66, 199, 255, 0.12);
+}
+
+body.pricing-page .pricing-compare-card.active {
+  border-color: rgba(176, 128, 160, 0.58);
+  box-shadow:
+    0 0 70px rgba(160, 96, 128, 0.16),
+    0 22px 54px rgba(0, 0, 0, 0.22);
+}
+
+body.pricing-page .compare-badge {
+  width: fit-content;
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: rgba(160, 96, 128, 0.28);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+body.pricing-page .compare-number {
+  display: block;
+  margin-bottom: 26px;
+  color: var(--pkg-cyan);
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+body.pricing-page .pricing-compare-card h3 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+body.pricing-page .pricing-compare-card p {
+  color: var(--pkg-muted);
+  line-height: 1.7;
+  margin-bottom: 26px;
+}
+
+body.pricing-page .pricing-compare-card ul {
+  list-style: none;
+  padding: 0;
+  margin: auto 0 0;
+}
+
+body.pricing-page .pricing-compare-card li {
+  padding: 11px 0;
+  color: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.pricing-page .pricing-compare-card li::before {
+  content: "✓";
+  color: var(--pkg-cyan);
+  margin-right: 10px;
+  font-weight: 900;
+}
+
+/* PROCESS */
+
+body.pricing-page .pricing-process {
+  padding-block: clamp(110px, 13vh, 160px);
+}
+
+/* CONTACT */
+
+body.pricing-page .pricing-contact {
+  padding-block: clamp(110px, 13vh, 160px);
+}
+
+body.pricing-page .pricing-contact .section-bg {
+  filter: saturate(1.05) contrast(1.04) brightness(0.92);
+}
+
+body.pricing-page .pricing-contact .section-overlay {
+  background:
+    radial-gradient(circle at 70% 48%, rgba(66, 199, 255, 0.08), transparent 35%),
+    linear-gradient(
+      90deg,
+      rgba(6, 7, 13, 0.86),
+      rgba(6, 7, 13, 0.5) 48%,
+      rgba(6, 7, 13, 0.18)
+    );
+}
+
+body.pricing-page .section-copy {
+  margin-top: 24px;
+  color: var(--pkg-soft);
+  font-size: 1.05rem;
+  line-height: 1.78;
+}
+
+body.pricing-page .contact-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+body.pricing-page .contact-benefits span {
+  display: inline-flex;
+  padding: 9px 14px;
+  border: 1px solid rgba(160, 208, 240, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(234, 246, 255, 0.84);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+body.pricing-page .contact-form {
+  padding: 34px;
+  border-radius: 34px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1199px) {
+  body.pricing-page .section-head {
+    margin-bottom: 70px;
+  }
+
+  body.pricing-page .pricing-compare-card {
+    min-height: 390px;
+  }
+}
+
+@media (max-width: 991px) {
+  body.pricing-page .pricing-section {
+    min-height: auto;
+  }
+
+  body.pricing-page .section-overlay,
+  body.pricing-page .section-overlay.stronger,
+  body.pricing-page .pricing-compare .section-overlay,
+  body.pricing-page .pricing-contact .section-overlay {
+    background: rgba(6, 7, 13, 0.42);
+  }
+}
+
+@media (max-width: 767px) {
+  body.pricing-page h1 {
+    max-width: 100%;
+    font-size: clamp(2.35rem, 12vw, 3.6rem);
+  }
+
+  body.pricing-page h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  body.pricing-page .hero-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  body.pricing-page .pricing-compare-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  body.pricing-page .contact-form {
+    padding: 24px;
+  }
+}

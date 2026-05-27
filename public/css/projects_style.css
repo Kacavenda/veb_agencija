@@ -1,0 +1,372 @@
+/* =====================================================================
+   PROJECTS PAGE - projects.html
+   ===================================================================== */
+
+body.projects-page {
+  --prj-cyan: #42c7ff;
+  --prj-violet: #b080ff;
+  --prj-pink: #ff8acb;
+  --prj-soft: rgba(234, 246, 255, 0.82);
+  --prj-muted: rgba(191, 215, 242, 0.76);
+  background: var(--midnight);
+}
+
+body.projects-page .nav-link.active {
+  color: #fff !important;
+}
+
+body.projects-page .nav-link.active::after {
+  transform: scaleX(1);
+  background: var(--prj-cyan);
+}
+
+/* SCENE SYSTEM */
+
+body.projects-page .projects-page-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+body.projects-page .projects-page-section .section-bg {
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  filter: saturate(0.95) contrast(1.04) brightness(0.9);
+  opacity: 1;
+}
+
+body.projects-page .projects-page-section::before,
+body.projects-page .projects-page-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 190px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+body.projects-page .projects-page-section::before {
+  top: 0;
+  background: linear-gradient(180deg, rgba(6, 7, 13, 0.88), transparent);
+}
+
+body.projects-page .projects-page-section::after {
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(6, 7, 13, 0.94), transparent);
+}
+
+body.projects-page .section-overlay {
+  background:
+    radial-gradient(circle at 24% 48%, rgba(66, 199, 255, 0.08), transparent 34%),
+    linear-gradient(
+      90deg,
+      rgba(6, 7, 13, 0.78),
+      rgba(6, 7, 13, 0.38) 48%,
+      rgba(6, 7, 13, 0.14)
+    );
+}
+
+body.projects-page .section-overlay.stronger {
+  background:
+    radial-gradient(circle at 50% 60%, rgba(66, 199, 255, 0.07), transparent 42%),
+    linear-gradient(
+      180deg,
+      rgba(6, 7, 13, 0.82),
+      rgba(6, 7, 13, 0.58) 50%,
+      rgba(6, 7, 13, 0.88)
+    );
+}
+
+/* BACKGROUNDS — KEEP CURRENT IMAGES */
+
+body.projects-page .projects-hero .section-bg {
+  background-image: url("../assets/projects-hero.png");
+}
+
+body.projects-page .projects-showcase .section-bg {
+  background-image: url("../assets/projects-list.png");
+}
+
+body.projects-page .projects-case .section-bg {
+  background-image: url("../assets/projects-detail.png");
+}
+
+body.projects-page .projects-process .section-bg {
+  background-image: url("../assets/projects-cta.png");
+}
+
+body.projects-page .projects-contact .section-bg {
+  background-image: url("../assets/projects-footer.png");
+  filter: saturate(0.92) contrast(1.03) brightness(0.86);
+}
+
+/* SHOWCASE */
+
+body.projects-page .projects-showcase {
+  padding-block: clamp(110px, 13vh, 160px);
+}
+
+body.projects-page .projects-heading {
+  max-width: none;
+  margin-bottom: 42px;
+}
+
+body.projects-page .projects-featured {
+  margin-top: 34px;
+  margin-bottom: 18px;
+}
+
+body.projects-page .projects-featured .project-visual {
+  background:
+    radial-gradient(circle at 54% 38%, rgba(160, 208, 240, 0.26), transparent 34%),
+    linear-gradient(135deg, rgba(160, 208, 240, 0.14), rgba(10, 19, 33, 0.78) 55%, rgba(160, 96, 128, 0.18));
+}
+
+body.projects-page .mini-project {
+  min-height: 170px;
+}
+
+body.projects-page .projects-case {
+  min-height: 130vh;
+  padding-block: clamp(170px, 22vh, 280px);
+}
+
+body.projects-page .projects-case .section-bg {
+  background-image: url("../assets/projects-detail.png");
+  background-position: center;
+  filter: saturate(0.95) contrast(1.04) brightness(0.88);
+}
+
+body.projects-page .projects-case .section-overlay {
+  background:
+    radial-gradient(circle at 50% 52%, rgba(66, 199, 255, 0.1), transparent 40%),
+    radial-gradient(circle at 50% 68%, rgba(176, 128, 255, 0.08), transparent 36%),
+    linear-gradient(
+      180deg,
+      rgba(6, 7, 13, 0.84),
+      rgba(6, 7, 13, 0.46) 46%,
+      rgba(6, 7, 13, 0.84)
+    );
+}
+
+body.projects-page .projects-case .section-head {
+  max-width: 880px;
+  margin-inline: auto;
+  margin-bottom: clamp(80px, 12vh, 145px);
+}
+
+body.projects-page .projects-case .section-head p {
+  max-width: 700px;
+  margin: 18px auto 0;
+  color: var(--prj-soft);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+body.projects-page .case-study-frame {
+  width: min(860px, 84vw);
+  min-height: 640px;
+  margin: 0 auto;
+  padding: clamp(42px, 5vw, 76px);
+  border-radius: 34px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-color: rgba(66, 199, 255, 0.34);
+  background:
+    radial-gradient(circle at 50% 90%, rgba(66, 199, 255, 0.18), transparent 52%),
+    radial-gradient(circle at 50% 18%, rgba(176, 128, 255, 0.08), transparent 42%),
+    linear-gradient(135deg, rgba(6, 10, 24, 0.28), rgba(6, 10, 24, 0.14));
+  box-shadow:
+    0 0 48px rgba(66, 199, 255, 0.2),
+    0 30px 80px rgba(0, 0, 0, 0.28),
+    inset 0 0 54px rgba(66, 199, 255, 0.08);
+}
+
+body.projects-page .case-study-frame:hover {
+  border-color: rgba(66, 199, 255, 0.52);
+  box-shadow:
+    0 0 64px rgba(66, 199, 255, 0.24),
+    0 34px 90px rgba(0, 0, 0, 0.32),
+    inset 0 0 60px rgba(66, 199, 255, 0.1);
+}
+
+body.projects-page .case-content {
+  max-width: 580px;
+}
+
+body.projects-page .case-label {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--prj-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+body.projects-page .case-content h3 {
+  color: #fff;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  margin-bottom: 20px;
+}
+
+body.projects-page .case-content p {
+  color: var(--prj-soft);
+  line-height: 1.75;
+  margin-bottom: 28px;
+  font-size: 1.05rem;
+}
+
+body.projects-page .case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+body.projects-page .case-tags span {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(160, 208, 240, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(234, 246, 255, 0.86);
+  padding: 9px 14px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+body.projects-page .case-info-row {
+  margin-top: 46px;
+}
+
+body.projects-page .case-info-card {
+  min-height: 220px;
+  padding: 28px;
+  border-radius: 28px;
+  transition:
+    transform 0.32s ease,
+    border-color 0.32s ease,
+    box-shadow 0.32s ease;
+}
+
+body.projects-page .case-info-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(66, 199, 255, 0.38);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.26),
+    0 0 34px rgba(66, 199, 255, 0.12);
+}
+
+body.projects-page .case-info-card span {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--prj-cyan);
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+body.projects-page .case-info-card h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+body.projects-page .case-info-card p {
+  color: var(--prj-muted);
+  line-height: 1.62;
+  margin: 0;
+}
+
+
+/* CONTACT */
+
+body.projects-page .projects-contact {
+  padding-block: clamp(110px, 13vh, 160px);
+}
+
+body.projects-page .projects-contact .section-overlay {
+  background:
+    radial-gradient(circle at 70% 48%, rgba(66, 199, 255, 0.08), transparent 35%),
+    linear-gradient(
+      90deg,
+      rgba(6, 7, 13, 0.86),
+      rgba(6, 7, 13, 0.5) 48%,
+      rgba(6, 7, 13, 0.18)
+    );
+}
+
+body.projects-page .section-copy {
+  margin-top: 24px;
+  color: var(--prj-soft);
+  font-size: 1.05rem;
+  line-height: 1.78;
+}
+
+body.projects-page .contact-form {
+  padding: 34px;
+  border-radius: 34px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1199px) {
+  body.projects-page .projects-featured {
+    margin-top: 28px;
+  }
+
+  body.projects-page .case-study-frame {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  body.projects-page .projects-page-section {
+    min-height: auto;
+  }
+
+  body.projects-page .section-overlay,
+  body.projects-page .section-overlay.stronger,
+  body.projects-page .projects-case .section-overlay,
+  body.projects-page .projects-contact .section-overlay {
+    background: rgba(6, 7, 13, 0.42);
+  }
+
+  body.projects-page .projects-heading {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  body.projects-page h1 {
+    max-width: 100%;
+    font-size: clamp(2.35rem, 12vw, 3.6rem);
+  }
+
+  body.projects-page h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  body.projects-page .hero-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  body.projects-page .case-study-frame,
+  body.projects-page .case-info-card,
+  body.projects-page .contact-form {
+    padding: 24px;
+  }
+
+  body.projects-page .case-study-frame {
+    min-height: 260px;
+  }
+}

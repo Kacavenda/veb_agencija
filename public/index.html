@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cinematic Agency | Web aplikacija za veb agenciju</title>
+    <title>Cinematic Agency — Digitalne priče koje se pamte</title>
     <meta
       name="description"
-      content="Cinematic scroll-driven landing page za web agenciju, izrađen HTML, CSS, Bootstrap, Node.js, Express.js i MongoDB stack-om."
+      content="Cinematic Agency je veb agencija koja pravi moderne, brze i responzivne sajtove. Pregledaj usluge, projekte i pakete za izradu sajta."
     />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,12 +16,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
+    <!-- ================= NAVBAR ================= -->
     <nav class="navbar navbar-expand-lg fixed-top cinematic-navbar" id="mainNavbar">
       <div class="container-fluid px-4 px-lg-5">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#hero">
@@ -40,21 +43,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#value">O nama</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Usluge</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects">Projekti</a></li>
-            <li class="nav-item"><a class="nav-link" href="#pricing">Paketi</a></li>
-            <li class="nav-item"><a class="nav-link" href="#process">Kako radimo</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Početna</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Usluge</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projekti</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Paketi</a></li>
+            <li class="nav-item"><a class="nav-link" href="process.html">Kako radimo</a></li>
           </ul>
-          <a class="btn btn-cinematic" href="#contact">Započni projekat</a>
+          <a class="btn btn-cinematic rounded-pill px-4" href="auth.html">Započni projekat</a>
         </div>
       </div>
     </nav>
 
+    <!-- ================= SIDE STORY PROGRESS ================= -->
     <aside class="story-progress d-none d-xl-flex" aria-label="Story progress">
       <a href="#hero"><span>01</span><small>Hero</small></a>
-      <a href="#value"><span>02</span><small>Value</small></a>
+      <a href="#value"><span>02</span><small>O nama</small></a>
       <a href="#services"><span>03</span><small>Usluge</small></a>
       <a href="#projects"><span>04</span><small>Projekti</small></a>
       <a href="#pricing"><span>05</span><small>Paketi</small></a>
@@ -66,52 +69,58 @@
     <div class="petals" aria-hidden="true"></div>
 
     <main>
+      <!-- ================= HERO ================= -->
       <section class="story-section hero-section" id="hero" data-bg="assets/hero-scene.png">
         <div class="section-bg"></div>
         <div class="section-overlay"></div>
-        <div class="container position-relative z-2">
-          <div class="row min-vh-100 align-items-center">
-            <div class="col-lg-7 scene-content reveal">
-              <p class="chapter-label">Chapter 01 · Pinned Hero Scene</p>
-              <h1>Kreiramo digitalne <em>priče</em> koje pokreću.</h1>
+        <div class="hero-ring" aria-hidden="true"></div>
+
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7 col-xxl-6 reveal">
+              <span class="hero-eyebrow"><span class="dot"></span> Cinematic Web Agency</span>
+              <h1>Digitalne <em>priče</em> koje se pamte.</h1>
               <p class="hero-text">
-                Pravimo moderne, brze i responzivne web sajtove za brendove koji žele da izgledaju profesionalno i ostanu zapamćeni.
+                Pravimo moderne, brze i responzivne sajtove za brendove koji žele da
+                izgledaju ozbiljno — i da ostanu zapamćeni dugo nakon prvog klika.
               </p>
-              <div class="d-flex flex-wrap gap-3 mt-4">
-                <a href="#projects" class="btn btn-light btn-lg rounded-pill px-4">Pogledaj projekte</a>
-                <a href="#services" class="btn btn-outline-light btn-lg rounded-pill px-4">Naše usluge</a>
+              <div class="hero-cta">
+                <a href="#projects" class="btn btn-ice btn-lg rounded-pill">Pogledaj projekte</a>
+                <a href="#services" class="btn btn-ghost btn-lg rounded-pill">Naše usluge</a>
               </div>
-              <div class="trust-tags mt-5">
-                <span>Web Design</span>
-                <span>UI/UX</span>
-                <span>Branding</span>
-                <span>Development</span>
-              </div>
-            </div>
-            <div class="col-lg-5 d-none d-lg-block">
-              <div class="liquid-glass hero-note reveal delay-2">
-                <p class="mb-2 text-uppercase small tracking">Scroll animation canvas</p>
-                <p class="mb-0">Vizual ostaje kao filmska scena, dok se tekst i elementi menjaju kroz scroll.</p>
-                <small>TODO: katana / sakura / ice keyframes</small>
+              <div class="hero-dots" aria-hidden="true">
+                <span class="is-active"></span><span></span><span></span>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- subtle floating info chips over the artwork -->
+        <div class="liquid-glass hero-chip top reveal delay-2">
+          <span class="live">Dostupno</span>
+          <span>Primamo nove projekte za Q2 2026</span>
+        </div>
+        <div class="liquid-glass hero-chip bottom reveal delay-3">
+          <strong>7 dana</strong>
+          <span>prosečno do prvog live sajta</span>
+        </div>
       </section>
 
-      <section class="story-section value-section" id="value" data-bg="assets/value-scene.png">
+      <!-- ================= VALUE / ABOUT ================= -->
+      <section class="story-section is-scene value-section" id="value" data-bg="assets/value-scene.png">
         <div class="section-bg"></div>
         <div class="section-overlay"></div>
-        <div class="container position-relative z-2 py-5">
-          <div class="row min-vh-100 align-items-center g-5">
+        <div class="container">
+          <div class="row align-items-center g-5">
             <div class="col-lg-5 reveal">
-              <p class="chapter-label">Chapter 02 · Text Reveal</p>
-              <h2>O nama / Naša <em>vrednost</em></h2>
-              <p class="lead muted">
-                Kombinujemo dizajn, tehnologiju i strategiju kako bismo pomogli biznisima da izgrade ozbiljno online prisustvo.
+              <p class="chapter-label">Chapter 02 · O nama</p>
+              <h2>Dizajn, tehnologija i strategija — na <em>jednom mestu.</em></h2>
+              <p class="muted mt-4">
+                Kombinujemo vizuelni dizajn, čist kod i jasnu strategiju kako bismo pomogli
+                biznisima da izgrade ozbiljno i prepoznatljivo online prisustvo.
               </p>
               <div class="value-tags">
-                <span>Moderni dizajn</span>
+                <span>Moderan dizajn</span>
                 <span>Responzivan sajt</span>
                 <span>Jasna komunikacija</span>
                 <span>Brza izrada</span>
@@ -130,82 +139,169 @@
         </div>
       </section>
 
-      <section class="story-section services-section" id="services" data-bg="assets/services-scene.png">
+      <!-- ================= SERVICES ================= -->
+      <section class="story-section is-scene services-section" id="services" data-bg="assets/services-scene.png">
         <div class="section-bg"></div>
         <div class="section-overlay"></div>
-        <div class="container position-relative z-2 py-5">
-          <div class="text-center section-heading reveal">
-            <p class="chapter-label justify-content-center">Chapter 03 · Service Reveal</p>
-            <h2>Usluge koje pretvaraju ideju u <em>digitalni proizvod</em></h2>
+        <div class="container">
+          <div class="section-heading text-center reveal">
+            <p class="chapter-label center">Chapter 03 · Usluge</p>
+            <h2>Sve što ideji treba da postane <em>digitalni proizvod.</em></h2>
           </div>
-          <div class="row g-4 mt-4">
-            <div class="col-md-6 col-xl reveal"><div class="liquid-glass service-card"><span>01</span><h3>Web Development</h3><p>Izrada modernih web sajtova za firme, brendove i profesionalce.</p></div></div>
-            <div class="col-md-6 col-xl reveal delay-1"><div class="liquid-glass service-card"><span>02</span><h3>UI/UX Design</h3><p>Pregledan interfejs, jasna struktura i iskustvo koje vodi ka konverziji.</p></div></div>
-            <div class="col-md-6 col-xl reveal delay-2"><div class="liquid-glass service-card"><span>03</span><h3>Website Redesign</h3><p>Moderniji izgled, bolja struktura i brže performanse postojećeg sajta.</p></div></div>
-            <div class="col-md-6 col-xl reveal delay-3"><div class="liquid-glass service-card"><span>04</span><h3>Branding</h3><p>Boje, tipografija i vizuelni stil koji čine brend prepoznatljivim.</p></div></div>
+          <div class="row g-4 align-items-stretch">
+            <div class="col-12 col-sm-6 col-lg-3 d-flex reveal">
+              <div class="liquid-glass service-card w-100">
+                <span class="service-num">01</span>
+                <h3>Web Development</h3>
+                <p>Izrada modernih web sajtova za firme, brendove i profesionalce — brzo, čisto i bez kompromisa.</p>
+                <span class="svc-line">Saznaj više <span class="arrow">→</span></span>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 d-flex reveal delay-1">
+              <div class="liquid-glass service-card w-100">
+                <span class="service-num">02</span>
+                <h3>UI / UX Dizajn</h3>
+                <p>Pregledan interfejs i jasna struktura koja vodi korisnika prirodno ka konverziji.</p>
+                <span class="svc-line">Saznaj više <span class="arrow">→</span></span>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 d-flex reveal delay-2">
+              <div class="liquid-glass service-card w-100">
+                <span class="service-num">03</span>
+                <h3>Redizajn sajta</h3>
+                <p>Moderniji izgled, bolja struktura i brže performanse vašeg postojećeg sajta.</p>
+                <span class="svc-line">Saznaj više <span class="arrow">→</span></span>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 d-flex reveal delay-3">
+              <div class="liquid-glass service-card w-100">
+                <span class="service-num">04</span>
+                <h3>Branding</h3>
+                <p>Boje, tipografija i vizuelni stil koji čine brend prepoznatljivim na svakom ekranu.</p>
+                <span class="svc-line">Saznaj više <span class="arrow">→</span></span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="story-section showcase-section" id="projects" data-bg="assets/showcase-scene.png">
+      <!-- ================= PROJECTS / PORTFOLIO ================= -->
+      <section class="story-section is-scene projects-section" id="projects" data-bg="assets/showcase-scene.png">
         <div class="section-bg"></div>
         <div class="section-overlay"></div>
-        <div class="container position-relative z-2 py-5">
-          <div class="row align-items-end mb-5 g-4">
+        <div class="container">
+          <div class="row align-items-end g-4 section-heading" style="max-width: none;">
             <div class="col-lg-7 reveal">
-              <p class="chapter-label">Chapter 04 · Featured Reveal</p>
-              <h2>Portfolio / <em>Projekti</em></h2>
+              <p class="chapter-label">Chapter 04 · Projekti</p>
+              <h2>Portfolio koji <em>gradi poverenje.</em></h2>
             </div>
             <div class="col-lg-5 reveal delay-1">
-              <p class="muted mb-0">Primeri digitalnih iskustava koja grade poverenje, jasno komuniciraju vrednost i vode korisnika ka akciji.</p>
+              <p class="muted mb-0">
+                Primeri digitalnih iskustava koja jasno komuniciraju vrednost i vode
+                korisnika ka konkretnoj akciji.
+              </p>
             </div>
           </div>
+
           <div class="liquid-glass featured-project reveal">
-            <div class="project-visual"></div>
+            <div class="project-visual">
+              <span class="tag">Featured Project</span>
+              <span class="glow-dot">↗</span>
+            </div>
             <div class="project-copy">
-              <small>Featured Website Project</small>
-              <h3>Digital presence system</h3>
-              <p>Moderan web sajt sa jakim vizuelnim identitetom, jasnom strukturom i fokusom na konverziju.</p>
-              <a href="#contact" class="btn btn-light rounded-pill">Pogledaj case study</a>
+              <small>Digital Presence System</small>
+              <h3>Kompletan online nastup za brend</h3>
+              <p>
+                Moderan web sajt sa jakim vizuelnim identitetom, jasnom strukturom sekcija
+                i fokusom na konverziju — od prve scene do poziva na akciju.
+              </p>
+              <ul class="project-meta">
+                <li><b>Web Design</b>UI smernice</li>
+                <li><b>Frontend</b>HTML · CSS · JS</li>
+                <li><b>Backend</b>Node · Mongo</li>
+              </ul>
+              <a href="#contact" class="btn btn-ghost rounded-pill">Pogledaj case study</a>
             </div>
           </div>
-          <div class="row g-4 mt-3">
-            <div class="col-md-4 reveal"><div class="liquid-glass mini-project">Business Website</div></div>
-            <div class="col-md-4 reveal delay-1"><div class="liquid-glass mini-project">Landing Page</div></div>
-            <div class="col-md-4 reveal delay-2"><div class="liquid-glass mini-project">Portfolio Website</div></div>
+
+          <div class="row g-4 mt-1">
+            <div class="col-md-4 d-flex reveal">
+              <div class="liquid-glass mini-project w-100">
+                <span class="pill">↗</span>
+                <small>Poslovni sajt</small>
+                <h4>Business Website</h4>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex reveal delay-1">
+              <div class="liquid-glass mini-project w-100">
+                <span class="pill">↗</span>
+                <small>Konverzija</small>
+                <h4>Landing Page</h4>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex reveal delay-2">
+              <div class="liquid-glass mini-project w-100">
+                <span class="pill">↗</span>
+                <small>Lični brend</small>
+                <h4>Portfolio Website</h4>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="story-section pricing-section" id="pricing" data-bg="assets/showcase-scene.png">
+      <!-- ================= PRICING ================= -->
+      <section class="story-section pricing-section" id="pricing" data-bg="assets/value-scene.png">
         <div class="section-bg"></div>
         <div class="section-overlay stronger"></div>
-        <div class="container position-relative z-2 py-5">
-          <div class="section-heading reveal">
-            <p class="chapter-label">Chapter 05 · Pricing Reveal</p>
-            <h2>Paketi za <em>izradu sajta</em></h2>
+        <div class="container">
+          <div class="section-heading text-center reveal">
+            <p class="chapter-label center">Chapter 05 · Paketi</p>
+            <h2>Paketi za <em>izradu sajta.</em></h2>
+            <p class="muted">Jasno definisan obim, bez skrivenih troškova. Plaćanje se dogovara nakon procene.</p>
           </div>
-          <div class="row g-4 mt-4">
-            <div class="col-lg-4 reveal">
-              <div class="liquid-glass price-card">
-                <h3>Paket Basic</h3><strong>300€</strong><p>Za jednostavan poslovni sajt.</p>
-                <ul><li>Do 5 sekcija</li><li>Responsive dizajn</li><li>Kontakt forma</li><li>Basic SEO struktura</li></ul>
-                <button class="btn btn-outline-light w-100 rounded-pill order-btn" data-package="Paket Basic">Izaberi paket</button>
+          <div class="row g-4 align-items-stretch justify-content-center">
+            <div class="col-md-6 col-lg-4 d-flex reveal">
+              <div class="liquid-glass price-card w-100">
+                <h3>Basic</h3>
+                <div class="price"><strong>300€</strong><span>jednokratno</span></div>
+                <p>Za jednostavan, čist poslovni sajt.</p>
+                <ul>
+                  <li>Do 5 sekcija</li>
+                  <li>Responsive dizajn</li>
+                  <li>Kontakt forma</li>
+                  <li>Basic SEO struktura</li>
+                </ul>
+                <button class="btn btn-ghost w-100 rounded-pill order-btn" data-package="Paket Basic">Izaberi Basic</button>
               </div>
             </div>
-            <div class="col-lg-4 reveal delay-1">
-              <div class="liquid-glass price-card popular">
+            <div class="col-md-6 col-lg-4 d-flex reveal delay-1">
+              <div class="liquid-glass price-card popular w-100">
                 <span class="popular-badge">Najpopularniji</span>
-                <h3>Paket Pro</h3><strong>500€</strong><p>Najbolji odnos obima, dizajna i roka.</p>
-                <ul><li>Više stranica</li><li>Napredniji dizajn</li><li>Animacije</li><li>Priprema dokumentacije</li></ul>
-                <button class="btn btn-cinematic w-100 rounded-pill order-btn" data-package="Paket Pro">Izaberi paket</button>
+                <h3>Pro</h3>
+                <div class="price"><strong>500€</strong><span>jednokratno</span></div>
+                <p>Najbolji odnos obima, dizajna i roka.</p>
+                <ul>
+                  <li>Više stranica</li>
+                  <li>Napredniji dizajn</li>
+                  <li>Animacije i interakcije</li>
+                  <li>Priprema dokumentacije</li>
+                </ul>
+                <button class="btn btn-cinematic w-100 rounded-pill order-btn" data-package="Paket Pro">Izaberi Pro</button>
               </div>
             </div>
-            <div class="col-lg-4 reveal delay-2">
-              <div class="liquid-glass price-card">
-                <h3>Paket Premium</h3><strong>Po dogovoru</strong><p>Napredan web nastup i custom animacije.</p>
-                <ul><li>Custom animacije</li><li>AI procena zahteva</li><li>Queue sistem priprema</li><li>Dashboard priprema</li></ul>
-                <button class="btn btn-outline-light w-100 rounded-pill order-btn" data-package="Paket Premium">Zakaži konsultacije</button>
+            <div class="col-md-6 col-lg-4 d-flex reveal delay-2">
+              <div class="liquid-glass price-card w-100">
+                <h3>Premium</h3>
+                <div class="price"><strong>Po dogovoru</strong></div>
+                <p>Napredan nastup i custom animacije.</p>
+                <ul>
+                  <li>Custom animacije</li>
+                  <li>AI procena zahteva</li>
+                  <li>Queue sistem (priprema)</li>
+                  <li>Dashboard (priprema)</li>
+                </ul>
+                <button class="btn btn-ghost w-100 rounded-pill order-btn" data-package="Paket Premium">Zakaži konsultacije</button>
               </div>
             </div>
           </div>
@@ -213,48 +309,108 @@
         </div>
       </section>
 
+      <!-- ================= PROCESS TIMELINE ================= -->
       <section class="story-section process-section" id="process" data-bg="assets/showcase-scene.png">
         <div class="section-bg"></div>
         <div class="section-overlay stronger"></div>
-        <div class="container position-relative z-2 py-5">
-          <div class="section-heading reveal">
-            <p class="chapter-label">Chapter 06 · Process Timeline</p>
-            <h2>Kako <em>radimo</em></h2>
+        <div class="container">
+          <div class="section-heading text-center reveal">
+            <p class="chapter-label center">Chapter 06 · Proces</p>
+            <h2>Kako <em>radimo.</em></h2>
+            <p class="muted">Vođen proces u pet jasnih koraka — od ideje do objavljenog sajta.</p>
           </div>
+
           <div class="timeline reveal delay-1">
-            <div><span>01</span><h3>Konsultacija</h3><p>Razumemo cilj, publiku i stil sajta.</p></div>
-            <div><span>02</span><h3>Planiranje</h3><p>Definišemo strukturu, sekcije i funkcionalnosti.</p></div>
-            <div><span>03</span><h3>Dizajn</h3><p>Pravimo moderan UI pravac.</p></div>
-            <div><span>04</span><h3>Razvoj</h3><p>Kodiramo frontend i povezujemo backend.</p></div>
-            <div><span>05</span><h3>Isporuka</h3><p>Testiranje, optimizacija i objava sajta.</p></div>
+            <div class="step">
+              <span class="num">01</span>
+              <h3>Konsultacija</h3>
+              <p>Razumemo cilj, publiku i željeni stil sajta.</p>
+            </div>
+            <div class="step">
+              <span class="num">02</span>
+              <h3>Planiranje</h3>
+              <p>Definišemo strukturu, sekcije i funkcionalnosti.</p>
+            </div>
+            <div class="step">
+              <span class="num">03</span>
+              <h3>Dizajn</h3>
+              <p>Pravimo moderan vizuelni pravac i UI.</p>
+            </div>
+            <div class="step">
+              <span class="num">04</span>
+              <h3>Razvoj</h3>
+              <p>Kodiramo frontend i povezujemo backend.</p>
+            </div>
+            <div class="step">
+              <span class="num">05</span>
+              <h3>Isporuka</h3>
+              <p>Testiranje, optimizacija i objava sajta.</p>
+            </div>
           </div>
-          <div class="row g-3 mt-4">
-            <div class="col-md-3 reveal"><div class="liquid-glass feature-chip">Dokumentacija</div></div>
-            <div class="col-md-3 reveal delay-1"><div class="liquid-glass feature-chip">AI Procena</div></div>
-            <div class="col-md-3 reveal delay-2"><div class="liquid-glass feature-chip">Queue Sistem</div></div>
-            <div class="col-md-3 reveal delay-3"><div class="liquid-glass feature-chip">Dashboard</div></div>
+
+          <div class="feature-chips reveal delay-2">
+            <div class="liquid-glass feature-chip">Dokumentacija <span class="badge-soon">uskoro</span></div>
+            <div class="liquid-glass feature-chip">AI Procena <span class="badge-soon">uskoro</span></div>
+            <div class="liquid-glass feature-chip">Queue Sistem <span class="badge-soon">uskoro</span></div>
+            <div class="liquid-glass feature-chip">Dashboard <span class="badge-soon">uskoro</span></div>
           </div>
         </div>
       </section>
 
-      <section class="story-section contact-section" id="contact" data-bg="assets/contact-scene.png">
+      <!-- ================= STATEMENT / TESTIMONIAL ================= -->
+      <section class="story-section statement-section" id="statement" data-bg="assets/hero-scene.png">
         <div class="section-bg"></div>
         <div class="section-overlay"></div>
-        <div class="container position-relative z-2 py-5">
-          <div class="row min-vh-100 align-items-center g-5">
+        <div class="container">
+          <div class="statement-inner reveal">
+            <span class="statement-quote-mark">&ldquo;</span>
+            <p class="statement-quote">
+              Dobar sajt nije samo lep dizajn. Dobar sajt jasno objašnjava uslugu,
+              gradi <em>poverenje</em> i vodi korisnika ka sledećem koraku.
+            </p>
+            <span class="statement-by">Naš pristup radu</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section class="story-section is-scene contact-section" id="contact" data-bg="css/assets/contact-scene.png">
+        <div class="section-bg"></div>
+        <div class="section-overlay"></div>
+        <div class="container">
+          <div class="row align-items-center g-5">
             <div class="col-lg-6 reveal">
-              <p class="chapter-label">Chapter 07 · Final Conversion</p>
+              <p class="chapter-label">Chapter 07 · Kontakt</p>
               <h2>Spremni za sledeću <em>scenu?</em></h2>
-              <p class="lead muted">Ako želiš sajt koji izgleda moderno, jasno predstavlja tvoj biznis i ostavlja profesionalan utisak, pošalji nam poruku.</p>
-              <div class="value-tags"><span>Brz odgovor</span><span>Besplatna konsultacija</span><span>Jasan plan izrade</span></div>
+              <p class="muted mt-4">
+                Ako želiš sajt koji izgleda moderno, jasno predstavlja tvoj biznis i ostavlja
+                profesionalan utisak — pošalji nam poruku i kreni od besplatne konsultacije.
+              </p>
+              <ul class="contact-benefits">
+                <li><strong>Brz odgovor</strong> — javljamo se u roku od 24h.</li>
+                <li><strong>Besplatna konsultacija</strong> — bez obaveze i pritiska.</li>
+                <li><strong>Jasan plan izrade</strong> — znaš tačno šta dobijaš i kada.</li>
+              </ul>
             </div>
             <div class="col-lg-6 reveal delay-1">
               <form class="liquid-glass contact-form" id="contactForm">
                 <div class="row g-3">
-                  <div class="col-md-6"><input class="form-control" name="name" placeholder="Ime i prezime" required /></div>
-                  <div class="col-md-6"><input class="form-control" name="email" type="email" placeholder="Email" required /></div>
-                  <div class="col-12"><input class="form-control" name="websiteType" placeholder="Tip sajta" /></div>
-                  <div class="col-12"><textarea class="form-control" name="message" rows="5" placeholder="Poruka" required></textarea></div>
+                  <div class="col-md-6">
+                    <label class="form-label-sm" for="cf-name">Ime i prezime</label>
+                    <input class="form-control" id="cf-name" name="name" placeholder="Vaše ime" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label-sm" for="cf-email">Email</label>
+                    <input class="form-control" id="cf-email" name="email" type="email" placeholder="vi@email.com" required />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label-sm" for="cf-type">Tip sajta</label>
+                    <input class="form-control" id="cf-type" name="websiteType" placeholder="npr. poslovni sajt, landing page…" />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label-sm" for="cf-msg">Poruka</label>
+                    <textarea class="form-control" id="cf-msg" name="message" rows="5" placeholder="Ukratko o projektu…" required></textarea>
+                  </div>
                 </div>
                 <button class="btn btn-cinematic w-100 rounded-pill mt-4" type="submit">Pošalji upit</button>
                 <div id="contactStatus" class="form-status mt-3"></div>
@@ -265,15 +421,43 @@
       </section>
     </main>
 
+    <!-- ================= FOOTER ================= -->
     <footer class="footer-section">
       <div class="container">
         <div class="row g-4">
-          <div class="col-lg-4"><h3>Cinematic Agency</h3><p>Kreiramo moderne web sajtove i digitalna iskustva koja ostavljaju utisak.</p></div>
-          <div class="col-sm-4 col-lg-2"><h4>Navigacija</h4><a href="#hero">Home</a><a href="#services">Usluge</a><a href="#projects">Projekti</a><a href="#pricing">Paketi</a></div>
-          <div class="col-sm-4 col-lg-3"><h4>Usluge</h4><a>Web Development</a><a>UI/UX Design</a><a>Website Redesign</a><a>Branding</a></div>
-          <div class="col-sm-4 col-lg-3"><h4>Kontakt</h4><a>info@cinematic.rs</a><a>Instagram</a><a>Novi Sad, Serbia</a></div>
+          <div class="col-lg-4">
+            <h3 class="d-flex align-items-center gap-2">
+              <span class="logo-mark"><span></span></span> Cinematic Agency
+            </h3>
+            <p class="brand-blurb mt-3">
+              Kreiramo moderne web sajtove i digitalna iskustva koja ostavljaju utisak.
+            </p>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h4>Navigacija</h4>
+            <a href="#hero">Početna</a>
+            <a href="#value">O nama</a>
+            <a href="#projects">Projekti</a>
+            <a href="#pricing">Paketi</a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <h4>Usluge</h4>
+            <a href="#services">Web Development</a>
+            <a href="#services">UI / UX Dizajn</a>
+            <a href="#services">Redizajn sajta</a>
+            <a href="#services">Branding</a>
+          </div>
+          <div class="col-lg-3">
+            <h4>Kontakt</h4>
+            <a href="mailto:info@cinematic.rs">info@cinematic.rs</a>
+            <a href="#contact">Instagram</a>
+            <a href="#contact">Novi Sad, Srbija</a>
+          </div>
         </div>
-        <div class="footer-bottom">© 2026 Cinematic Agency. Sva prava zadržana.</div>
+        <div class="footer-bottom">
+          <span>© 2026 Cinematic Agency. Sva prava zadržana.</span>
+          <span>Izrađeno sa HTML · CSS · Bootstrap · Node.js</span>
+        </div>
       </div>
     </footer>
 
