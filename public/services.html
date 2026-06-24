@@ -1,321 +1,643 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="sr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Usluge — Cinematic Agency</title>
-    <meta
-      name="description"
-      content="Usluge Cinematic Agency: web development, UI/UX dizajn, redizajn sajta i branding. Cinematic service journey od ideje do gotovog sajta."
-    />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/services-style.css" />
-  </head>
-
-  <body class="services-page">
-    <!-- ================= NAVBAR ================= -->
-    <nav class="navbar navbar-expand-lg fixed-top cinematic-navbar" id="mainNavbar">
-      <div class="container-fluid px-4 px-lg-5">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-          <span class="logo-mark"><span></span></span>
-          <span>Cinematic Agency</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="index.html">Početna</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Usluge</a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html">Projekti</a></li>
-            <li class="nav-item"><a class="nav-link" href="pricing.html">Paketi</a></li>
-            <li class="nav-item"><a class="nav-link" href="process.html">Kako radimo</a></li>
-          </ul>
-          <a class="btn btn-cinematic rounded-pill px-4" href="auth.html">Započni projekat</a>
-        </div>
-      </div>
-    </nav>
-
-    <aside class="story-progress d-none d-xl-flex" aria-label="Story progress">
-      <a href="#svc-hero"><span>01</span><small>Hero</small></a>
-      <a href="#svc-overview"><span>02</span><small>Vrednost</small></a>
-      <a href="#svc-cards"><span>03</span><small>Usluge</small></a>
-      <a href="#svc-process"><span>04</span><small>Proces</small></a>
-      <a href="#svc-cta"><span>05</span><small>Kontakt</small></a>
-      <div class="progress-line"><span id="scrollProgress"></span></div>
-    </aside>
-
-    <div class="petals" aria-hidden="true"></div>
-
-    <main>
-      <!-- ================= 01 · HERO ================= -->
-      <section class="story-section hero-section svc-hero" id="svc-hero" data-bg="assets/services-hero.png">
-        <div class="section-bg"></div>
-        <div class="section-overlay"></div>
-        <div class="hero-ring" aria-hidden="true"></div>
-
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-7 col-xxl-6 reveal">
-              <span class="hero-eyebrow"><span class="dot"></span> Chapter 01 · Usluge</span>
-              <h1>Usluge koje pretvaraju ideju u <em>digitalni proizvod.</em></h1>
-              <p class="hero-text">
-                Od prvog vizuelnog utiska do gotovog sajta, gradimo web iskustva koja izgledaju
-                profesionalno, jasno komuniciraju vrednost i vode korisnika ka akciji.
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Usluge — Web Design Agency</title>
+<meta content="Izrada poslovnih web sajtova, landing stranica, redizajn, razvoj funkcionalnosti i održavanje." name="description"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css?v=12" rel="stylesheet"/>
+<link href="css/services-redesign.css?v=1" rel="stylesheet"/>
+<link href="css/main-pages-scroll.css?v=1" rel="stylesheet"/><link href="css/unified-navbar.css?v=2" rel="stylesheet"/><link href="css/site-responsive.css?v=1" rel="stylesheet"/></head>
+<body class="services-redesign">
+<nav class="navbar navbar-expand-lg fixed-top cinematic-navbar site-unified-navbar" id="mainNavbar">
+<div class="container">
+<a aria-label="Web Design Agency početna" class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+<span class="logo-mark"><span></span></span>
+<span>Web Design Agency</span>
+</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Otvori navigaciju" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link" href="index.html">Početna</a>
+</li>
+<li class="nav-item">
+<a aria-current="page" class="nav-link active" href="services.html">Usluge</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="projects.html">Projekti</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="pricing.html">Paketi</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="process.html">Kako radimo</a>
+</li>
+</ul>
+<a class="btn btn-cinematic rounded-pill px-4 site-auth-button" href="auth.html">
+            Login / Register
+            <span aria-hidden="true">→</span>
+</a>
+</div>
+</div>
+</nav><aside aria-label="Navigacija kroz stranicu" class="main-page-side-nav d-none d-xl-flex">
+<a class="active" href="#services-home">
+<span>01</span>
+<small>Uvod</small>
+</a>
+<a class="" href="#services-overview">
+<span>02</span>
+<small>Pristup</small>
+</a>
+<a class="" href="#service-catalog">
+<span>03</span>
+<small>Usluge</small>
+</a>
+<a class="" href="#solution-paths">
+<span>04</span>
+<small>Izbor</small>
+</a>
+<a class="" href="#services-process">
+<span>05</span>
+<small>Proces</small>
+</a>
+<a class="" href="#services-contact">
+<span>06</span>
+<small>Pro</small>
+</a>
+<div class="main-page-side-progress">
+<span></span>
+</div>
+</aside>
+<div aria-hidden="true" class="services-ambient">
+<span class="services-orb services-orb-one"></span>
+<span class="services-orb services-orb-two"></span>
+<span class="services-grid"></span>
+<div class="services-stars">
+<i></i><i></i><i></i><i></i><i></i><i></i>
+<i></i><i></i><i></i><i></i><i></i><i></i>
+</div>
+</div>
+<div aria-hidden="true" class="petals services-petals"></div>
+<main>
+<section class="services-hero" id="services-home">
+<div class="services-hero-bg"></div>
+<div class="services-hero-shade"></div>
+<div class="services-hero-glow"></div>
+<div class="container position-relative">
+<div class="row align-items-center min-vh-100">
+<div class="col-lg-7 col-xl-6">
+<div class="services-hero-copy reveal">
+<span class="services-kicker">
+<span></span>
+                Kompletna web rešenja
+              </span>
+<h1>
+                Od prve ideje do sajta koji
+                <em>donosi rezultat.</em>
+</h1>
+<p>
+                Povezujemo strategiju, dizajn, razvoj i podršku kako biste
+                dobili brz, jasan i funkcionalan sajt koji odgovara ciljevima
+                vašeg poslovanja.
               </p>
-              <div class="hero-cta">
-                <a href="#svc-cards" class="btn btn-ice btn-lg rounded-pill">Pogledaj usluge</a>
-                <a href="#svc-cta" class="btn btn-ghost btn-lg rounded-pill">Zakaži konsultacije</a>
-              </div>
-              <div class="hero-dots" aria-hidden="true">
-                <span class="is-active"></span><span></span><span></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= 02 · VREDNOST / OVERVIEW ================= -->
-      <section class="story-section is-scene svc-overview" id="svc-overview" data-bg="assets/services-overview.png">
-        <div class="section-bg"></div>
-        <div class="section-overlay"></div>
-
-        <div class="container">
-          <div class="row align-items-center g-5">
-            <div class="col-lg-7 col-xl-6 reveal">
-              <p class="chapter-label">Chapter 02 · Vrednost</p>
-              <h2>Jedna usluga nije dovoljna. Potreban je ceo <em>digitalni sistem.</em></h2>
-              <p class="muted mt-4">
-                Dobar sajt nije samo lep vizual. Potrebni su struktura, brzina, jasan sadržaj,
-                poverenje i putanja koja korisnika vodi do kontakta ili kupovine.
+<div class="services-hero-actions">
+<a class="btn btn-cinematic btn-lg rounded-pill" href="#service-catalog">
+                  Pogledaj usluge
+                  <span>↓</span>
+</a>
+<a class="btn btn-ghost btn-lg rounded-pill" href="pricing.html">
+                  Pogledaj pakete
+                  <span>→</span>
+</a>
+</div>
+<div class="services-trust-row">
+<span>
+<b>✓</b>
+                  Besplatna početna procena
+                </span>
+<span>
+<b>✓</b>
+                  Jasna ponuda i rokovi
+                </span>
+<span>
+<b>✓</b>
+                  Responzivno na svim uređajima
+                </span>
+</div>
+</div>
+</div>
+</div>
+<div class="services-metrics glass-panel reveal delay-2">
+<article>
+<span class="metric-symbol">01</span>
+<strong>4 ključne usluge</strong>
+<small>od izrade do podrške</small>
+</article>
+<article>
+<span class="metric-symbol">02</span>
+<strong>5 faza</strong>
+<small>jasan proces realizacije</small>
+</article>
+<article>
+<span class="metric-symbol">03</span>
+<strong>100% responsive</strong>
+<small>telefon, tablet i računar</small>
+</article>
+<article>
+<span class="metric-symbol">04</span>
+<strong>Kontrola projekta</strong>
+<small>materijali, statusi i poruke</small>
+</article>
+</div>
+</div>
+</section>
+<section aria-label="Oblasti rada" class="services-marquee">
+<div class="services-marquee-track">
+<span>Web dizajn</span><i>✦</i>
+<span>Frontend razvoj</span><i>✦</i>
+<span>Responsive prikaz</span><i>✦</i>
+<span>Landing stranice</span><i>✦</i>
+<span>Redizajn</span><i>✦</i>
+<span>Web funkcionalnosti</span><i>✦</i>
+<span>Održavanje</span><i>✦</i>
+<span>Optimizacija</span><i>✦</i>
+<span>Web dizajn</span><i>✦</i>
+<span>Frontend razvoj</span><i>✦</i>
+<span>Responsive prikaz</span><i>✦</i>
+<span>Landing stranice</span><i>✦</i>
+<span>Redizajn</span><i>✦</i>
+<span>Web funkcionalnosti</span><i>✦</i>
+<span>Održavanje</span><i>✦</i>
+<span>Optimizacija</span><i>✦</i>
+</div>
+</section>
+<section class="services-section services-overview" id="services-overview">
+<div aria-hidden="true" class="overview-scene"></div>
+<div class="container position-relative">
+<div class="services-section-heading reveal">
+<span>Pristup projektu</span>
+<h2>
+            Dobar sajt nije samo lep.
+            <em>Mora da bude koristan.</em>
+</h2>
+<p>
+            Zato pre dizajna definišemo cilj, publiku, sadržaj i funkcionalnosti.
+            Svaka stranica dobija jasnu ulogu, a svaki element vodi korisnika ka
+            sledećem koraku.
+          </p>
+</div>
+<div class="overview-layout">
+<article class="overview-feature reveal">
+<span class="overview-number">01</span>
+<div>
+<h3>Analiza i struktura</h3>
+<p>
+                Pregledamo poslovni cilj, publiku, ponudu i materijale, a zatim
+                definišemo stranice, navigaciju i raspored sadržaja.
               </p>
-
-              <div class="svc-benefits">
-                <div class="liquid-glass svc-benefit reveal">
-                  <b>01</b>
-                  <div><h3>Strategija i struktura</h3><p>Definišemo cilj, sekcije i tok korisnika pre dizajna.</p></div>
-                </div>
-                <div class="liquid-glass svc-benefit reveal delay-1">
-                  <b>02</b>
-                  <div><h3>Vizuelni identitet</h3><p>Boje, tipografija i atmosfera koje brend čine ozbiljnim.</p></div>
-                </div>
-                <div class="liquid-glass svc-benefit reveal delay-2">
-                  <b>03</b>
-                  <div><h3>Frontend implementacija</h3><p>Čist, brz i responzivan kod koji pretvara dizajn u sajt.</p></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= 03 · USLUGE  ================= -->
-      <section class="story-section is-scene svc-cards" id="svc-cards" data-bg="assets/services-cards.png">
-        <div class="section-bg"></div>
-        <div class="section-overlay"></div>
-
-        <div class="container">
-          <div class="section-heading text-center reveal">
-            <p class="chapter-label center">Chapter 03 · Usluge</p>
-            <h2>Sve što ideji treba da postane <em>digitalni proizvod.</em></h2>
-          </div>
-          <div class="row g-4 align-items-stretch">
-            <div class="col-12 col-sm-6 col-lg-3 d-flex reveal">
-              <div class="liquid-glass service-card w-100">
-                <span class="service-num">01</span>
-                <h3>Web Development</h3>
-                <p>Izrada modernih web sajtova za firme, brendove i profesionalce — brzo, čisto i bez kompromisa.</p>
-                <span class="svc-line">Detaljnije <span class="arrow">→</span></span>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 d-flex reveal delay-1">
-              <div class="liquid-glass service-card w-100">
-                <span class="service-num">02</span>
-                <h3>UI / UX Dizajn</h3>
-                <p>Pregledan interfejs i jasna struktura koja vodi korisnika prirodno ka konverziji.</p>
-                <span class="svc-line">Detaljnije <span class="arrow">→</span></span>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 d-flex reveal delay-2">
-              <div class="liquid-glass service-card w-100">
-                <span class="service-num">03</span>
-                <h3>Redizajn sajta</h3>
-                <p>Moderniji izgled, bolja struktura i brže performanse vašeg postojećeg sajta.</p>
-                <span class="svc-line">Detaljnije <span class="arrow">→</span></span>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 d-flex reveal delay-3">
-              <div class="liquid-glass service-card w-100">
-                <span class="service-num">04</span>
-                <h3>Branding</h3>
-                <p>Boje, tipografija i vizuelni stil koji čine brend prepoznatljivim na svakom ekranu.</p>
-                <span class="svc-line">Detaljnije <span class="arrow">→</span></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= 04 · PROCES  ================= -->
-      <section class="story-section svc-process" id="svc-process" data-bg="assets/services-process.png">
-        <div class="section-bg"></div>
-        <div class="section-overlay stronger"></div>
-
-        <div class="container">
-          <div class="section-heading text-center reveal">
-            <p class="chapter-label center">Chapter 04 · Proces</p>
-            <h2>Kako uslugu pretvaramo u <em>gotov sajt.</em></h2>
-            <p class="muted">Vođen proces u pet jasnih koraka — od ideje do objavljenog sajta.</p>
-          </div>
-
-          <div class="timeline reveal delay-1">
-            <div class="step"><span class="num">01</span><h3>Konsultacija</h3><p>Razumemo cilj, publiku i željeni stil sajta.</p></div>
-            <div class="step"><span class="num">02</span><h3>Planiranje</h3><p>Definišemo strukturu, sekcije i funkcionalnosti.</p></div>
-            <div class="step"><span class="num">03</span><h3>Dizajn</h3><p>Pravimo moderan vizuelni pravac i UI.</p></div>
-            <div class="step"><span class="num">04</span><h3>Razvoj</h3><p>Kodiramo frontend i povezujemo backend.</p></div>
-            <div class="step"><span class="num">05</span><h3>Isporuka</h3><p>Testiranje, optimizacija i objava sajta.</p></div>
-          </div>
-
-          <div class="feature-chips reveal delay-2">
-            <div class="liquid-glass feature-chip">Dokumentacija <span class="badge-soon">uskoro</span></div>
-            <div class="liquid-glass feature-chip">AI Procena <span class="badge-soon">uskoro</span></div>
-            <div class="liquid-glass feature-chip">Queue Sistem <span class="badge-soon">uskoro</span></div>
-            <div class="liquid-glass feature-chip">Dashboard <span class="badge-soon">uskoro</span></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= 05 · KONTAKT / CTA ================= -->
-      <section class="story-section is-scene svc-cta" id="svc-cta" data-bg="assets/services-cta.png">
-        <div class="section-bg"></div>
-        <div class="section-overlay"></div>
-
-        <div class="container">
-          <div class="section-heading text-center reveal mx-auto" style="max-width: 720px;">
-            <p class="chapter-label center">Chapter 05 · Kontakt</p>
-            <h2>Spreman da tvoj sajt izgleda kao ozbiljan <em>digitalni proizvod?</em></h2>
-            <p class="muted">
-              Pošalji kratak opis projekta, izaberi tip usluge i dobićeš jasan predlog sledećih koraka.
+</div>
+</article>
+<article class="overview-feature reveal delay-1">
+<span class="overview-number">02</span>
+<div>
+<h3>Dizajn prilagođen brendu</h3>
+<p>
+                Vizuelni pravac usklađujemo sa identitetom firme i ponašanjem
+                korisnika, bez generičkog šablonskog utiska.
+              </p>
+</div>
+</article>
+<article class="overview-feature reveal delay-2">
+<span class="overview-number">03</span>
+<div>
+<h3>Razvoj i testiranje</h3>
+<p>
+                Proveravamo prikaz, navigaciju, forme, brzinu i dogovorene
+                funkcionalnosti pre finalne objave.
+              </p>
+</div>
+</article>
+<article class="overview-feature reveal delay-3">
+<span class="overview-number">04</span>
+<div>
+<h3>Objava i podrška</h3>
+<p>
+                Sajt postavljamo na domen i hosting, a nakon isporuke ostajemo
+                dostupni za održavanje i dalje unapređenje.
+              </p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="services-section service-catalog" id="service-catalog">
+<div aria-hidden="true" class="catalog-glow"></div>
+<div class="container position-relative">
+<div class="services-section-heading text-center reveal">
+<span>Naše usluge</span>
+<h2>
+            Izaberite rešenje prema
+            <em>cilju vašeg projekta.</em>
+</h2>
+<p>
+            Usluge se mogu ugovoriti pojedinačno ili spojiti u kompletan paket
+            prilagođen obimu i zahtevima projekta.
+          </p>
+</div>
+<div class="service-grid">
+<article class="service-detail-card reveal">
+<div class="service-card-top">
+<span class="service-card-icon">▧</span>
+<span class="service-card-code">01</span>
+</div>
+<h3>Izrada poslovnih web sajtova</h3>
+<p>
+              Kompletna izrada sajta za firmu, preduzetnika ili lokalni biznis,
+              sa jasnim predstavljanjem usluga i jednostavnim kontaktiranjem.
             </p>
-            <div class="d-flex flex-wrap gap-3 justify-content-center mt-4">
-              <a href="#svc-form" class="btn btn-ice btn-lg rounded-pill">Pošalji upit</a>
-              <a href="index.html#pricing" class="btn btn-ghost btn-lg rounded-pill">Pogledaj pakete</a>
-            </div>
-          </div>
-
-          <form class="liquid-glass contact-form reveal delay-1 svc-form" id="svc-form">
-            <div class="row g-3">
-              <div class="col-md-4">
-                <label class="form-label-sm" for="svc-type">Tip usluge</label>
-                <select class="form-select" id="svc-type" name="serviceType">
-                  <option>Novi web sajt</option>
-                  <option>Redizajn sajta</option>
-                  <option>UI / UX dizajn</option>
-                  <option>Branding</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label class="form-label-sm" for="svc-budget">Budžet</label>
-                <select class="form-select" id="svc-budget" name="budget">
-                  <option>do 300€</option>
-                  <option>300€ – 600€</option>
-                  <option>600€ – 1000€</option>
-                  <option>1000€+</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label class="form-label-sm" for="svc-deadline">Rok</label>
-                <select class="form-select" id="svc-deadline" name="deadline">
-                  <option>Što pre</option>
-                  <option>2 – 4 nedelje</option>
-                  <option>1 – 2 meseca</option>
-                  <option>Fleksibilno</option>
-                </select>
-              </div>
-              <div class="col-12">
-                <label class="form-label-sm" for="svc-note">Kratak opis projekta</label>
-                <textarea class="form-control" id="svc-note" name="note" rows="3" placeholder="O čemu se radi?"></textarea>
-              </div>
-            </div>
-            <button class="btn btn-cinematic w-100 rounded-pill mt-4" type="submit">Započni razgovor</button>
-            <div class="form-status mt-3" id="svcFormStatus"></div>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="footer-section">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <h3 class="d-flex align-items-center gap-2">
-              <span class="logo-mark"><span></span></span> Cinematic Agency
-            </h3>
-            <p class="brand-blurb mt-3">
-              Kreiramo moderne web sajtove i digitalna iskustva koja ostavljaju utisak.
+<ul>
+<li>Plan strukture i sadržaja</li>
+<li>Dizajn prilagođen brendu</li>
+<li>Responsive prikaz</li>
+<li>Kontakt forma</li>
+<li>Osnovna SEO optimizacija</li>
+</ul>
+<div class="service-card-actions">
+<a href="package-basic.html">Basic paket →</a>
+<a href="projects.html">Primeri projekata ↗</a>
+</div>
+</article>
+<article class="service-detail-card featured reveal delay-1">
+<span class="service-popular">Najtraženije</span>
+<div class="service-card-top">
+<span class="service-card-icon">◩</span>
+<span class="service-card-code">02</span>
+</div>
+<h3>Landing stranice</h3>
+<p>
+              Fokusirane stranice za kampanje, promocije, događaje ili posebne
+              ponude, sa jasnim pozivom korisnika na akciju.
             </p>
-          </div>
-          <div class="col-6 col-lg-2">
-            <h4>Navigacija</h4>
-            <a href="index.html">Početna</a>
-            <a href="index.html#value">O nama</a>
-            <a href="services.html">Usluge</a>
-            <a href="index.html#pricing">Paketi</a>
-          </div>
-          <div class="col-6 col-lg-3">
-            <h4>Usluge</h4>
-            <a href="#svc-cards">Web Development</a>
-            <a href="#svc-cards">UI / UX Dizajn</a>
-            <a href="#svc-cards">Redizajn sajta</a>
-            <a href="#svc-cards">Branding</a>
-          </div>
-          <div class="col-lg-3">
-            <h4>Kontakt</h4>
-            <a href="mailto:info@cinematic.rs">info@cinematic.rs</a>
-            <a href="#svc-cta">Instagram</a>
-            <a href="#svc-cta">Novi Sad, Srbija</a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <span>© 2026 Cinematic Agency. Sva prava zadržana.</span>
-          <span>Izrađeno sa HTML · CSS · Bootstrap · Node.js</span>
-        </div>
-      </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      (function () {
-        const form = document.getElementById('svc-form');
-        const status = document.getElementById('svcFormStatus');
-        if (!form || !status) return;
-        form.addEventListener('submit', function (event) {
-          event.preventDefault();
-          status.textContent = 'Hvala! Javljamo se uskoro sa predlogom sledećih koraka.';
-          form.reset();
-        });
-      })();
-    </script>
-  </body>
+<ul>
+<li>Jedan glavni cilj stranice</li>
+<li>Jasan tok sadržaja</li>
+<li>Brzo učitavanje</li>
+<li>Kontakt ili prodajna forma</li>
+<li>Priprema za oglase</li>
+</ul>
+<div class="service-card-actions">
+<a href="package-pro.html">Pro paket →</a>
+<a href="projects.html">Pogledaj radove ↗</a>
+</div>
+</article>
+<article class="service-detail-card reveal delay-2">
+<div class="service-card-top">
+<span class="service-card-icon">✎</span>
+<span class="service-card-code">03</span>
+</div>
+<h3>Redizajn postojećeg sajta</h3>
+<p>
+              Unapređujemo zastareo izgled, strukturu, sadržaj i iskustvo
+              korišćenja, uz očuvanje elemenata koji već dobro funkcionišu.
+            </p>
+<ul>
+<li>Analiza postojećeg sajta</li>
+<li>Nova vizuelna hijerarhija</li>
+<li>Bolja mobilna verzija</li>
+<li>Unapređenje brzine</li>
+<li>Preuređenje sadržaja</li>
+</ul>
+<div class="service-card-actions">
+<a href="package-pro.html">Pogledaj Pro →</a>
+<a href="index.html#contact">Zatraži procenu ↗</a>
+</div>
+</article>
+<article class="service-detail-card reveal delay-3">
+<div class="service-card-top">
+<span class="service-card-icon">&lt;/&gt;</span>
+<span class="service-card-code">04</span>
+</div>
+<h3>Funkcionalnosti i održavanje</h3>
+<p>
+              Razvijamo dodatne funkcionalnosti i integracije, a postojeći sajt
+              održavamo sigurnim, ažurnim i spremnim za dalji rast.
+            </p>
+<ul>
+<li>Prilagođene forme i kalkulatori</li>
+<li>Korisnički nalozi</li>
+<li>Integracije sa servisima</li>
+<li>Izmene i ažuriranja</li>
+<li>Tehnička podrška</li>
+</ul>
+<div class="service-card-actions">
+<a href="package-premium.html">Premium paket →</a>
+<a href="index.html#contact">Pošalji zahtev ↗</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="services-section solution-paths" id="solution-paths">
+<div aria-hidden="true" class="paths-scene"></div>
+<div class="container position-relative">
+<div class="services-section-heading reveal">
+<span>Izbor rešenja</span>
+<h2>
+            Koja usluga odgovara
+            <em>vašoj situaciji?</em>
+</h2>
+</div>
+<div class="solution-path-grid">
+<a class="solution-path-card reveal" href="package-basic.html">
+<span>Pokrećete novi biznis</span>
+<h3>Potreban vam je jasan i profesionalan prvi sajt.</h3>
+<p>
+              Počinjemo od osnovne strukture, ključnih informacija i kontakt
+              forme kako bi klijenti lako razumeli čime se bavite.
+            </p>
+<b>Basic paket →</b>
+</a>
+<a class="solution-path-card reveal delay-1" href="package-pro.html">
+<span>Želite više upita</span>
+<h3>Potreban vam je jači nastup ili posebna prodajna stranica.</h3>
+<p>
+              Kreiramo detaljniji sajt ili landing stranicu sa jasnim tokom,
+              animacijama i naprednijim funkcionalnostima.
+            </p>
+<b>Pro paket →</b>
+</a>
+<a class="solution-path-card reveal delay-2" href="package-premium.html">
+<span>Imate specifičan zahtev</span>
+<h3>Potreban vam je sistem prilagođen načinu rada firme.</h3>
+<p>
+              Planiramo rešenje po meri, dodatne funkcionalnosti, integracije,
+              korisničke naloge i dugoročnu podršku.
+            </p>
+<b>Premium paket →</b>
+</a>
+</div>
+</div>
+</section>
+<section class="services-section services-process" id="services-process">
+<div aria-hidden="true" class="process-scene"></div>
+<div class="container position-relative">
+<div class="services-section-heading text-center reveal">
+<span>Proces realizacije</span>
+<h2>
+            Od upita do
+            <em>objavljenog sajta.</em>
+</h2>
+<p>
+            Svaki projekat prolazi kroz jasne tačke provere i odobrenja, tako da
+            u svakom trenutku znate šta je završeno i šta sledi.
+          </p>
+</div>
+<div class="services-process-line">
+<article class="process-stage reveal">
+<span class="stage-icon">◌</span>
+<b>01</b>
+<h3>Upit i procena</h3>
+<p>Analiziramo cilj, obim, rok i potrebne materijale.</p>
+</article>
+<article class="process-stage reveal delay-1">
+<span class="stage-icon">▤</span>
+<b>02</b>
+<h3>Ponuda</h3>
+<p>Definišemo cenu, rok, funkcionalnosti i broj korekcija.</p>
+</article>
+<article class="process-stage reveal delay-2">
+<span class="stage-icon">✦</span>
+<b>03</b>
+<h3>Brief i dizajn</h3>
+<p>Prikupljamo sadržaj i pripremamo vizuelni predlog.</p>
+</article>
+<article class="process-stage reveal delay-3">
+<span class="stage-icon">&lt;/&gt;</span>
+<b>04</b>
+<h3>Razvoj i testiranje</h3>
+<p>Razvijamo sajt i proveravamo svaku funkcionalnost.</p>
+</article>
+<article class="process-stage reveal">
+<span class="stage-icon">↗</span>
+<b>05</b>
+<h3>Objava i podrška</h3>
+<p>Objavljujemo finalnu verziju i ostajemo dostupni.</p>
+</article>
+</div>
+<div class="process-links reveal delay-2">
+<a href="process.html">
+            Detaljno pogledaj kako radimo
+            <span>→</span>
+</a>
+<a href="projects.html">
+            Pogledaj realizovane projekte
+            <span>→</span>
+</a>
+</div>
+</div>
+</section>
+<section class="services-section services-faq">
+<div class="container position-relative">
+<div class="faq-layout">
+<div class="services-section-heading reveal">
+<span>Najčešća pitanja</span>
+<h2>
+              Pre početka
+              <em>saradnje.</em>
+</h2>
+<p>
+              Kratki odgovori na pitanja koja najčešće dobijamo pre procene i
+              formiranja ponude.
+            </p>
+<a class="btn btn-ghost rounded-pill" href="process.html">
+              Ceo proces saradnje
+              <span>→</span>
+</a>
+</div>
+<div class="accordion services-accordion" id="servicesAccordion">
+<div class="accordion-item reveal">
+<h3 class="accordion-header">
+<button aria-controls="faqOne" aria-expanded="true" class="accordion-button" data-bs-target="#faqOne" data-bs-toggle="collapse" type="button">
+                  Koliko traje izrada sajta?
+                </button>
+</h3>
+<div class="accordion-collapse collapse show" data-bs-parent="#servicesAccordion" id="faqOne">
+<div class="accordion-body">
+                  Rok zavisi od broja stranica, funkcionalnosti i brzine
+                  dostavljanja materijala. Prvu radnu verziju jednostavnijih
+                  projekata najčešće pripremamo u periodu od 7 do 14 dana.
+                </div>
+</div>
+</div>
+<div class="accordion-item reveal delay-1">
+<h3 class="accordion-header">
+<button aria-controls="faqTwo" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#faqTwo" data-bs-toggle="collapse" type="button">
+                  Šta treba da dostavim pre početka?
+                </button>
+</h3>
+<div class="accordion-collapse collapse" data-bs-parent="#servicesAccordion" id="faqTwo">
+<div class="accordion-body">
+                  Potrebni su osnovni podaci o firmi, opis usluga, kontakt
+                  informacije, logo, fotografije i smernice za stil. Sve se može
+                  dostaviti kroz korisnički portal.
+                </div>
+</div>
+</div>
+<div class="accordion-item reveal delay-2">
+<h3 class="accordion-header">
+<button aria-controls="faqThree" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#faqThree" data-bs-toggle="collapse" type="button">
+                  Da li su korekcije uključene?
+                </button>
+</h3>
+<div class="accordion-collapse collapse" data-bs-parent="#servicesAccordion" id="faqThree">
+<div class="accordion-body">
+                  Da. Broj korekcija se definiše u ponudi pre početka projekta,
+                  kako bi obim rada i rokovi bili jasni za obe strane.
+                </div>
+</div>
+</div>
+<div class="accordion-item reveal delay-3">
+<h3 class="accordion-header">
+<button aria-controls="faqFour" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#faqFour" data-bs-toggle="collapse" type="button">
+                  Da li nudite održavanje nakon objave?
+                </button>
+</h3>
+<div class="accordion-collapse collapse" data-bs-parent="#servicesAccordion" id="faqFour">
+<div class="accordion-body">
+                  Da. Možemo preuzeti tehničko održavanje, manje izmene sadržaja,
+                  podršku, sigurnosne provere i dalji razvoj funkcionalnosti.
+                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="services-section services-contact" id="services-contact">
+<div aria-hidden="true" class="contact-scene"></div>
+<div class="container position-relative">
+<div class="contact-layout">
+<div class="contact-copy reveal">
+<span>Preporučeni sledeći korak</span>
+<h2>
+        Za većinu poslovnih sajtova <em>Pro je najbolji balans.</em>
+</h2>
+<p>
+        Dobijate više povezanih stranica, napredniji vizuelni sistem, animacije i dovoljno prostora da jasno predstavite ponudu, projekte i kontakt.
+      </p>
+<div class="contact-shortcuts">
+<a href="pricing.html#pro-package">
+<b>Paketi</b>
+<small>Uporedite Basic, Pro i Premium</small>
+<span>→</span>
+</a>
+<a href="projects.html">
+<b>Projekti</b>
+<small>Pogledajte prethodne radove</small>
+<span>→</span>
+</a>
+<a href="process.html">
+<b>Proces</b>
+<small>Saznajte kako sarađujemo</small>
+<span>→</span>
+</a>
+</div>
+</div>
+<article class="featured-pro-card glass-panel reveal delay-1" style="--pro-accent:#54dcff;--pro-accent-2:#9268ff;--pro-soft:rgba(84, 220, 255, 0.14);--pro-border:rgba(84, 220, 255, 0.34);">
+<div class="featured-pro-visual">
+<img alt="Pro paket za napredniji poslovni web sajt" src="assets/pro-package-scene.png"/>
+<span class="featured-pro-index">02</span>
+<span class="featured-pro-badge">Najpopularniji izbor</span>
+<div class="featured-pro-visual-copy">
+<small>Za jači digitalni nastup</small>
+<strong>Pro</strong>
+</div>
+</div>
+<div class="featured-pro-body">
+<div class="featured-pro-heading">
+<div>
+<span>Pro paket</span>
+<h3>Više sadržaja, animacija i mogućnosti.</h3>
+</div>
+<div class="featured-pro-price">
+<strong>500€</strong>
+<small>jednokratno</small>
+</div>
+</div>
+<p>
+          Za poslovanja kojima je potreban ozbiljniji sajt sa više
+          stranica, upečatljivijim dizajnom i naprednijim sadržajem.
+        </p>
+<ul>
+<li>Više povezanih stranica</li>
+<li>Napredniji vizuelni sistem</li>
+<li>Animacije i interakcije</li>
+<li>Portfolio, usluge i kontakt</li>
+<li>Dva kruga korekcija</li>
+</ul>
+<div class="featured-pro-best">
+<span>Najbolje za:</span>
+<b>Firme u rastu · Kampanje · Jači brend nastup</b>
+</div>
+<div class="featured-pro-actions">
+<a class="btn btn-ghost rounded-pill" href="package-pro.html">
+            Detalji paketa
+            <span>→</span>
+</a>
+<button class="btn btn-cinematic rounded-pill order-btn" data-package="Paket Pro" type="button">
+            Izaberi Pro
+            <span>↗</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer class="services-footer">
+<div class="container">
+<div class="services-footer-main">
+<div>
+<a class="navbar-brand d-inline-flex align-items-center gap-2" href="index.html">
+<span class="logo-mark">
+<span></span>
+</span>
+<span>Web Design Agency</span>
+</a>
+<p>
+            Izrada web sajtova, landing stranica, redizajn i funkcionalnosti
+            prilagođene stvarnim ciljevima poslovanja.
+          </p>
+</div>
+<nav aria-label="Footer navigacija">
+<a href="index.html">Početna</a>
+<a href="services.html">Usluge</a>
+<a href="projects.html">Projekti</a>
+<a href="pricing.html">Paketi</a>
+<a href="process.html">Kako radimo</a>
+<a href="auth.html">Korisnički nalog</a>
+</nav>
+</div>
+<div class="services-footer-bottom">
+<span>© 2026 Web Design Agency</span>
+<div>
+<a href="index.html#contact">Kontakt</a>
+<a href="auth.html">Prijava</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js?v=12"></script>
+<script src="js/services-effects.js?v=1"></script>
+<script src="js/main-pages-scroll.js?v=1"></script><script src="js/unified-navbar.js?v=1"></script></body>
 </html>

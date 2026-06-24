@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="sr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Istorija kupovina — Web Design Agency</title>
+<meta content="Pregled evidentiranih PayPal Sandbox transakcija i izabranih web paketa." name="description"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css?v=9" rel="stylesheet"/>
+<link href="css/account-pages.css?v=9" rel="stylesheet"/>
+<link href="css/unified-navbar.css?v=2" rel="stylesheet"/><link href="css/site-responsive.css?v=1" rel="stylesheet"/></head>
+<body class="account-page purchase-history-page">
+<nav class="navbar navbar-expand-lg fixed-top cinematic-navbar site-unified-navbar" id="mainNavbar">
+<div class="container">
+<a aria-label="Web Design Agency početna" class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+<span class="logo-mark"><span></span></span>
+<span>Web Design Agency</span>
+</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Otvori navigaciju" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link" href="index.html">Početna</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="services.html">Usluge</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="projects.html">Projekti</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="pricing.html">Paketi</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="process.html">Kako radimo</a>
+</li>
+</ul>
+<a class="btn btn-cinematic rounded-pill px-4 site-auth-button" href="auth.html">
+            Login / Register
+            <span aria-hidden="true">→</span>
+</a>
+</div>
+</div>
+</nav>
+<div aria-hidden="true" class="account-page-scene">
+<div class="account-page-bg"></div>
+<div class="account-page-overlay"></div>
+<div class="account-page-orbit orbit-one"></div>
+<div class="account-page-orbit orbit-two"></div>
+</div>
+<div aria-hidden="true" class="petals"></div>
+<main class="account-page-main">
+<section class="account-page-hero compact-account-hero">
+<div class="container">
+<div class="account-page-heading reveal">
+<p class="chapter-label">Klijentski portal · Kupovine</p>
+<h1>
+              Pregled svih paketa koje ste
+              <em>izabrali.</em>
+</h1>
+<p>
+              Ovde su prikazane završene PayPal Sandbox transakcije, izabrani paketi, konfiguracije, količine i evidentirani iznosi.
+            </p>
+</div>
+<div class="purchase-summary-grid reveal delay-1">
+<article class="liquid-glass account-stat-card">
+<span>Broj kupovina</span>
+<strong id="purchasesTotal">0</strong>
+</article>
+<article class="liquid-glass account-stat-card">
+<span>Evidentiran iznos</span>
+<strong id="purchasesSpent">0 €</strong>
+</article>
+<article class="liquid-glass account-stat-card">
+<span>Izabranih paketa</span>
+<strong id="purchasesPackages">0</strong>
+</article>
+</div>
+</div>
+</section>
+<section class="account-content-section">
+<div class="container">
+<div class="purchase-history-list" id="purchaseHistoryList"></div>
+<section class="account-empty-state liquid-glass" hidden="" id="purchaseHistoryEmpty">
+<span class="account-empty-icon">◇</span>
+<h2>Još nema evidentiranih kupovina.</h2>
+<p>
+              Kada završiš PayPal Sandbox plaćanje, kupovina će biti prikazana
+              ovde.
+            </p>
+<a class="btn btn-ice rounded-pill px-4" href="pricing.html">
+              Pogledaj pakete
+            </a>
+</section>
+<div aria-live="polite" class="account-page-status" id="purchaseHistoryStatus" role="status">
+            Učitavanje istorije kupovina...
+          </div>
+</div>
+</section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js?v=9"></script>
+<script src="js/purchase-history.js?v=9"></script>
+<script src="js/unified-navbar.js?v=1"></script></body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="sr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Uspešno plaćanje — Web Design Agency</title>
+<meta content="Potvrda PayPal Sandbox plaćanja i automatski otvoreni projekti u Web Design Agency sistemu." name="description"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css?v=9" rel="stylesheet"/>
+<link href="css/payment-success.css?v=9" rel="stylesheet"/>
+<link href="css/unified-navbar.css?v=2" rel="stylesheet"/><link href="css/site-responsive.css?v=1" rel="stylesheet"/></head>
+<body class="payment-success-page">
+<nav class="navbar navbar-expand-lg fixed-top cinematic-navbar site-unified-navbar" id="mainNavbar">
+<div class="container">
+<a aria-label="Web Design Agency početna" class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+<span class="logo-mark"><span></span></span>
+<span>Web Design Agency</span>
+</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Otvori navigaciju" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link" href="index.html">Početna</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="services.html">Usluge</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="projects.html">Projekti</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="pricing.html">Paketi</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="process.html">Kako radimo</a>
+</li>
+</ul>
+<a class="btn btn-cinematic rounded-pill px-4 site-auth-button" href="auth.html">
+            Login / Register
+            <span aria-hidden="true">→</span>
+</a>
+</div>
+</div>
+</nav>
+<div aria-hidden="true" class="success-scene">
+<div class="success-scene-bg"></div>
+<div class="success-scene-overlay"></div>
+<div class="success-orbit success-orbit-one"></div>
+<div class="success-orbit success-orbit-two"></div>
+</div>
+<div aria-hidden="true" class="petals"></div>
+<main class="success-main">
+<div class="container">
+<section class="success-hero reveal">
+<div aria-hidden="true" class="success-mark">
+<span>✓</span>
+</div>
+<p class="chapter-label center">
+            PayPal Sandbox · Testno plaćanje završeno
+          </p>
+<h1>
+            Plaćanje je evidentirano, a projekat je
+            <em>automatski otvoren.</em>
+</h1>
+<p class="success-lead">
+            Transakcija je evidentirana u sistemu. Za svaki izabrani paket otvoren je poseban projekat sa početnom listom briefa i materijala koje je potrebno dostaviti.
+          </p>
+</section>
+<section class="success-grid">
+<article class="liquid-glass payment-summary-card reveal">
+<div class="success-card-head">
+<div>
+<span>Potvrda plaćanja</span>
+<h2>PayPal transakcija</h2>
+</div>
+<span class="success-status" id="paymentStatus">
+                Učitavanje
+              </span>
+</div>
+<dl class="success-details">
+<div>
+<dt>Ukupan iznos</dt>
+<dd id="paymentAmount">—</dd>
+</div>
+<div>
+<dt>PayPal Order ID</dt>
+<dd id="paypalOrderId">—</dd>
+</div>
+<div>
+<dt>Capture ID</dt>
+<dd id="paypalCaptureId">—</dd>
+</div>
+<div>
+<dt>Broj projekata</dt>
+<dd id="projectCount">—</dd>
+</div>
+</dl>
+<button class="success-copy-button" id="copyOrderButton" type="button">
+              Kopiraj PayPal Order ID
+            </button>
+</article>
+<article class="liquid-glass next-steps-card reveal delay-1">
+<span class="next-steps-kicker">Sledeći korak</span>
+<h2>Dostavljanje briefa i materijala</h2>
+<p>
+              Otvorite stranicu Moji projekti, unesite podatke o firmi i sadržaju, dodajte logo i fotografije i pošaljite materijale administratoru na pregled.
+            </p>
+<ul>
+<li>Pregled paketa i dogovorene konfiguracije</li>
+<li>Dostavljanje logoa, tekstova, fotografija i kontakt podataka</li>
+<li>Praćenje statusa i komunikacija kroz projekat</li>
+</ul>
+<div class="success-actions">
+<a class="btn btn-ice rounded-pill px-4" href="pricing.html">
+                Pogledaj pakete
+              </a>
+<a class="btn btn-ghost rounded-pill px-4" href="index.html">
+                Nazad na početnu
+              </a>
+</div>
+</article>
+</section>
+<section class="success-projects-section reveal">
+<div class="success-projects-heading">
+<div>
+<p class="chapter-label">Otvoreni projekti</p>
+<h2>Vaši novi <em>projekti.</em></h2>
+</div>
+<p>
+              Za svaku jedinicu izabranog paketa kreira se poseban projekat, kako bi se materijali, statusi i komunikacija vodili odvojeno.
+            </p>
+</div>
+<div class="success-projects-grid" id="successProjects"></div>
+<div class="success-empty-projects liquid-glass" hidden="" id="successProjectsEmpty">
+<h3>Projekti još nisu učitani.</h3>
+<p id="successProjectsEmptyText">
+              Proveravamo podatke o plaćanju.
+            </p>
+</div>
+</section>
+<div aria-live="polite" class="success-page-status" id="successPageStatus" role="status"></div>
+</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js?v=9"></script>
+<script src="js/payment-success.js?v=9"></script>
+<script src="js/unified-navbar.js?v=1"></script></body>
+</html>

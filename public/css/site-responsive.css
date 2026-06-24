@@ -1,0 +1,356 @@
+/* =====================================================================
+   SITE-WIDE RESPONSIVE SAFETY LAYER
+   Applied last on every page.
+   ===================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+  font: inherit;
+}
+
+main,
+section,
+article,
+aside,
+header,
+footer,
+nav,
+div {
+  min-width: 0;
+}
+
+table {
+  max-width: 100%;
+}
+
+/* Main redesigned pages */
+
+.home-redesign .container,
+.services-redesign .container,
+.projects-redesign .container,
+.pricing-redesign .container,
+.process-redesign .container {
+  width: 100%;
+}
+
+.featured-pro-card {
+  max-width: 100%;
+}
+
+/* The fixed chapter menu is useful only on genuinely wide screens. */
+@media (max-width: 1439px) {
+  .main-page-side-nav,
+  .process-side-nav {
+    display: none !important;
+  }
+
+  .featured-pro-card {
+    margin-right: 0 !important;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1699px) {
+  .featured-pro-card {
+    width: min(100%, 570px) !important;
+    margin-right: 42px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .home-pro-layout,
+  .services-contact-layout,
+  .projects-contact-layout,
+  .pricing-contact-layout,
+  .process-contact-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .featured-pro-card {
+    width: min(100%, 760px) !important;
+    justify-self: center !important;
+    margin-inline: auto !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .home-redesign .container,
+  .services-redesign .container,
+  .projects-redesign .container,
+  .pricing-redesign .container,
+  .process-redesign .container {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+
+  .projects-hero,
+  .services-hero,
+  .pricing-hero,
+  .process-hero {
+    min-height: auto !important;
+  }
+
+  .projects-hero .min-vh-100,
+  .services-hero .min-vh-100,
+  .pricing-hero .min-vh-100,
+  .process-hero .min-vh-100 {
+    min-height: 650px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-redesign .container,
+  .services-redesign .container,
+  .projects-redesign .container,
+  .pricing-redesign .container,
+  .process-redesign .container {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
+
+  .featured-pro-heading,
+  .featured-pro-actions,
+  .projects-footer-main,
+  .pricing-footer-main,
+  .process-footer-main {
+    min-width: 0;
+  }
+
+  .featured-pro-visual {
+    min-height: 210px;
+  }
+
+  .featured-pro-visual img {
+    height: 225px;
+  }
+
+  .featured-pro-body {
+    padding: 20px 17px;
+  }
+
+  .featured-pro-heading h3 {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Authentication */
+
+.auth-page .auth-scene {
+  min-height: 100svh;
+}
+
+.auth-page .auth-wrapper {
+  width: 100%;
+  min-height: 100svh;
+
+  display: grid;
+  place-items: center;
+
+  padding-right: 18px !important;
+  padding-bottom: 34px;
+  padding-left: 18px !important;
+}
+
+.auth-page .auth-card {
+  width: min(100%, 560px);
+  max-width: 100%;
+}
+
+.auth-page .form-control {
+  width: 100%;
+}
+
+@media (max-width: 575px) {
+  .auth-page .auth-wrapper {
+    align-items: start;
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+  }
+
+  .auth-page .auth-card {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .auth-page .auth-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* Cart */
+
+.cart-page .cart-main {
+  min-height: 100svh;
+}
+
+.cart-page .cart-main > .container,
+.cart-page .cart-main .container {
+  width: 100%;
+  max-width: 1480px;
+
+  padding-right: clamp(16px, 4vw, 66px);
+  padding-left: clamp(16px, 4vw, 66px);
+}
+
+.cart-page .cart-layout {
+  min-width: 0;
+}
+
+@media (max-width: 991px) {
+  .cart-page .cart-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cart-page .cart-summary {
+    position: static !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .cart-page .cart-item,
+  .cart-page .cart-summary {
+    border-radius: 18px;
+  }
+
+  .cart-page .cart-item-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+/* Account pages */
+
+.account-page .account-page-main {
+  min-height: 100svh;
+}
+
+.account-page .account-page-main .container {
+  width: 100%;
+  max-width: 1480px;
+
+  padding-right: clamp(16px, 4vw, 66px);
+  padding-left: clamp(16px, 4vw, 66px);
+}
+
+.account-page .profile-layout,
+.account-page .projects-grid,
+.account-page .purchase-history-grid,
+.account-page .account-content-grid {
+  min-width: 0;
+}
+
+@media (max-width: 991px) {
+  .account-page .profile-layout,
+  .account-page .account-content-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .account-page .account-page-heading {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .account-page .account-page-hero {
+    min-height: auto;
+  }
+
+  .account-page .account-page-heading h1 {
+    overflow-wrap: anywhere;
+  }
+
+  .account-page .project-card,
+  .account-page .purchase-card,
+  .account-page .profile-card {
+    padding: 20px 16px;
+  }
+
+  .account-page .project-card-actions,
+  .account-page .profile-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+/* Payment success */
+
+.payment-success-page .success-main {
+  min-height: 100svh;
+}
+
+.payment-success-page .success-main .container {
+  width: 100%;
+  max-width: 1280px;
+
+  padding-right: clamp(16px, 4vw, 60px);
+  padding-left: clamp(16px, 4vw, 60px);
+}
+
+.payment-success-page .success-card {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .payment-success-page .success-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .payment-success-page .success-actions .btn {
+    width: 100%;
+  }
+}
+
+/* Horizontal content such as comparison tables remains usable. */
+
+.comparison-table-wrap,
+.table-responsive,
+.account-table-wrap,
+.purchase-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Touch-friendly controls */
+
+@media (pointer: coarse) {
+  button,
+  .btn,
+  a.nav-link,
+  input,
+  select {
+    min-height: 42px;
+  }
+}

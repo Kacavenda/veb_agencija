@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="sr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Korpa — Web Design Agency</title>
+<meta content="Pregled izabranih paketa, konfiguracija i početne cene web projekta." name="description"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css?v=9" rel="stylesheet"/>
+<link href="css/cart-style.css?v=12" rel="stylesheet"/>
+<link href="css/unified-navbar.css?v=2" rel="stylesheet"/><link href="css/site-responsive.css?v=1" rel="stylesheet"/></head>
+<body class="cart-page">
+<nav class="navbar navbar-expand-lg fixed-top cinematic-navbar site-unified-navbar" id="mainNavbar">
+<div class="container">
+<a aria-label="Web Design Agency početna" class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+<span class="logo-mark"><span></span></span>
+<span>Web Design Agency</span>
+</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Otvori navigaciju" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link" href="index.html">Početna</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="services.html">Usluge</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="projects.html">Projekti</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="pricing.html">Paketi</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="process.html">Kako radimo</a>
+</li>
+</ul>
+<a class="btn btn-cinematic rounded-pill px-4 site-auth-button" href="auth.html">
+            Login / Register
+            <span aria-hidden="true">→</span>
+</a>
+</div>
+</div>
+</nav>
+<div aria-hidden="true" class="cart-background">
+<div class="cart-background-image"></div>
+<div class="cart-background-overlay"></div>
+<div class="cart-background-glow"></div>
+</div>
+<div aria-hidden="true" class="petals"></div>
+<main class="cart-main">
+<section class="cart-hero">
+<div class="container">
+<div class="cart-heading reveal">
+<p class="chapter-label">Korpa · Izabrane web usluge</p>
+<h1>Pregledajte izabrani obim pre nego što saradnja <em>počne.</em></h1>
+<p>
+              U korpi su prikazani izabrani paketi, dodatne stranice, funkcionalnosti, revizije i početna cena konfiguracije. Konačni obim potvrđuje se nakon pregleda zahteva.
+            </p>
+</div>
+<div class="cart-layout">
+<section class="liquid-glass cart-products-panel reveal">
+<div class="cart-panel-header">
+<div>
+<span class="cart-panel-kicker">Pregled narudžbine</span>
+<h2>Izabrani paketi</h2>
+</div>
+<span class="cart-count-label" id="cartCountLabel">0 paketa</span>
+</div>
+<div aria-hidden="true" class="cart-column-headings">
+<span>Paket i konfiguracija</span>
+<span>Cena</span>
+<span>Količina</span>
+<span>Ukupno</span>
+</div>
+<div class="cart-items" id="cartItems"></div>
+<div class="cart-empty" hidden="" id="cartEmpty">
+<span class="cart-empty-icon">◇</span>
+<h3>Korpa je trenutno prazna.</h3>
+<p>Izaberi Basic, Pro ili Premium paket i on će se pojaviti ovde.</p>
+<a class="btn btn-ice rounded-pill px-4" href="pricing.html">
+                  Pogledaj pakete
+                </a>
+</div>
+<div class="cart-products-footer">
+<a class="btn btn-ghost rounded-pill px-4" href="pricing.html">
+                  + Dodaj još jedan paket
+                </a>
+<button class="cart-clear-button" id="clearCartButton" type="button">
+                  Isprazni korpu
+                </button>
+</div>
+</section>
+<aside class="liquid-glass cart-summary-panel reveal delay-1">
+<span class="cart-panel-kicker">Ukupan obračun</span>
+<h2>Pregled korpe</h2>
+<div class="cart-summary-row">
+<span>Ukupna količina</span>
+<strong id="summaryCount">0</strong>
+</div>
+<div class="cart-summary-row">
+<span>Osnovne cene paketa</span>
+<strong id="summaryBase">0 €</strong>
+</div>
+<div class="cart-summary-row cart-summary-extras">
+<span>Izmene konfiguracije</span>
+<strong id="summaryExtras">0 €</strong>
+</div>
+<div class="cart-summary-divider"></div>
+<div class="cart-summary-total">
+<span>Ukupno</span>
+<strong id="summaryTotal">0 €</strong>
+</div>
+<p class="cart-tax-note">Prikazane cene predstavljaju početni obračun izabrane konfiguracije.</p>
+<button class="btn btn-cinematic cart-checkout-button" id="checkoutButton" type="button">Plati preko PayPal-a</button>
+<section class="paypal-checkout-panel" hidden="" id="paypalCheckoutPanel">
+<div class="paypal-checkout-head">
+<div>
+<span>Testno plaćanje</span>
+<h3>Plati preko PayPal-a</h3>
+</div>
+<span class="paypal-sandbox-badge">SANDBOX</span>
+</div>
+<p>
+                  Ovo je razvojno PayPal Sandbox okruženje. Plaćanje ne koristi stvaran novac.
+                </p>
+<div id="paypalButtonContainer"></div>
+<button class="paypal-close-button" id="paypalCloseButton" type="button">
+                  Zatvori PayPal opcije
+                </button>
+</section>
+<div aria-live="polite" class="cart-status" id="cartStatus" role="status"></div>
+<div class="cart-summary-benefits">
+<span>✓ Sve izabrane opcije prikazane su uz paket</span>
+<span>✓ Iznos se ponovo proverava na backend-u</span>
+<span>✓ PayPal Sandbox ne naplaćuje stvaran novac</span>
+</div>
+</aside>
+</div>
+</div>
+</section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js?v=9"></script>
+<script src="js/cart.js?v=12"></script>
+<script src="js/unified-navbar.js?v=1"></script></body>
+</html>

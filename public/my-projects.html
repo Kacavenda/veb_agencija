@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="sr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moji projekti — Cinematic Agency</title>
+<meta content="Detaljan pregled svih projekata korisnika, statusa, konfiguracija i materijala." name="description"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/account-pages.css?v=6" rel="stylesheet"/>
+</head>
+<body class="account-page projects-account-page">
+<nav class="navbar navbar-expand-lg fixed-top cinematic-navbar" id="mainNavbar">
+<div class="container-fluid px-4 px-lg-5">
+<a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+<span class="logo-mark"><span></span></span>
+<span>Cinematic Agency</span>
+</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+                Početna
+              </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="services.html">
+                Usluge
+              </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="projects.html">
+                Projekti
+              </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="pricing.html">
+                Paketi
+              </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="process.html">
+                Kako radimo
+              </a>
+</li>
+</ul>
+<a class="btn btn-cinematic rounded-pill px-4" href="auth.html">
+            Započni projekat
+          </a>
+</div>
+</div>
+</nav>
+<div aria-hidden="true" class="account-page-scene">
+<div class="account-page-bg"></div>
+<div class="account-page-overlay"></div>
+<div class="account-page-orbit orbit-one"></div>
+<div class="account-page-orbit orbit-two"></div>
+</div>
+<div aria-hidden="true" class="petals"></div>
+<main class="account-page-main">
+<section class="account-page-hero">
+<div class="container">
+<div class="account-page-heading reveal">
+<p class="chapter-label">
+              Korisnički prostor · Projekti
+            </p>
+<h1>
+              Svi tvoji projekti, statusi i materijali
+              <em>na jednom mestu.</em>
+</h1>
+<p>
+              Svaki kupljeni paket ima poseban projekat.
+              Ovde možeš da vidiš njegovu konfiguraciju,
+              pratiš status i pošalješ sve što je potrebno
+              za početak izrade.
+            </p>
+</div>
+<div class="account-stats-grid reveal delay-1">
+<article class="liquid-glass account-stat-card">
+<span>Ukupno projekata</span>
+<strong id="projectsTotal">0</strong>
+</article>
+<article class="liquid-glass account-stat-card">
+<span>Aktivni projekti</span>
+<strong id="projectsActive">0</strong>
+</article>
+<article class="liquid-glass account-stat-card">
+<span>Čekaju materijale</span>
+<strong id="projectsWaiting">0</strong>
+</article>
+<article class="liquid-glass account-stat-card">
+<span>Završeni projekti</span>
+<strong id="projectsCompleted">0</strong>
+</article>
+</div>
+<section class="materials-guide liquid-glass reveal delay-2">
+<div class="materials-guide-copy">
+<span>Priprema projekta</span>
+<h2>
+                Pošalji materijale direktno kroz svoj projekat.
+              </h2>
+<p>
+                Otvori projekat, klikni na
+                <strong>Dodaj ili izmeni materijale</strong>,
+                unesi tekstove ili linkove, dodaj potrebne fajlove i označi
+                ono što je spremno. Nakon čuvanja administrator dobija ažurirane
+                podatke i dokumente.
+              </p>
+</div>
+<div class="materials-guide-steps">
+<span><b>01</b> Otvori editor</span>
+<span><b>02</b> Popuni materijale</span>
+<span><b>03</b> Pošalji na pregled</span>
+</div>
+</section>
+</div>
+</section>
+<section class="account-content-section">
+<div class="container">
+<div class="account-toolbar reveal">
+<div aria-label="Filtriranje projekata" class="account-filter-group">
+<button class="account-filter active" data-project-filter="all" type="button">
+                Svi
+              </button>
+<button class="account-filter" data-project-filter="active" type="button">
+                Aktivni
+              </button>
+<button class="account-filter" data-project-filter="waiting" type="button">
+                Čekaju materijale
+              </button>
+<button class="account-filter" data-project-filter="completed" type="button">
+                Završeni
+              </button>
+</div>
+<a class="btn btn-ghost rounded-pill px-4" href="pricing.html">
+              + Novi paket
+            </a>
+</div>
+<div class="projects-account-list" id="projectsAccountList"></div>
+<section class="account-empty-state liquid-glass" hidden="" id="projectsEmptyState">
+<span class="account-empty-icon">◇</span>
+<h2>Još nema projekata.</h2>
+<p>
+              Nakon uspešne PayPal kupovine,
+              projekat će automatski biti prikazan
+              na ovoj stranici.
+            </p>
+<a class="btn btn-ice rounded-pill px-4" href="pricing.html">
+              Izaberi paket
+            </a>
+</section>
+<div aria-live="polite" class="account-page-status" id="projectsPageStatus" role="status">
+            Učitavanje projekata...
+          </div>
+</div>
+</section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/my-projects.js?v=12"></script>
+</body>
+</html>

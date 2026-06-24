@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="sr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profil korisnika — Web Design Agency</title>
+<meta content="Upravljanje profilom, podacima firme i lozinkom korisnika Web Design Agency." name="description"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css?v=9" rel="stylesheet"/>
+<link href="css/account-pages.css?v=9" rel="stylesheet"/>
+<link href="css/profile-style.css?v=9" rel="stylesheet"/>
+<link href="css/unified-navbar.css?v=2" rel="stylesheet"/><link href="css/site-responsive.css?v=1" rel="stylesheet"/></head>
+<body class="account-page profile-account-page">
+<nav class="navbar navbar-expand-lg fixed-top cinematic-navbar site-unified-navbar" id="mainNavbar">
+<div class="container">
+<a aria-label="Web Design Agency početna" class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+<span class="logo-mark"><span></span></span>
+<span>Web Design Agency</span>
+</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Otvori navigaciju" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link" href="index.html">Početna</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="services.html">Usluge</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="projects.html">Projekti</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="pricing.html">Paketi</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="process.html">Kako radimo</a>
+</li>
+</ul>
+<a class="btn btn-cinematic rounded-pill px-4 site-auth-button" href="auth.html">
+            Login / Register
+            <span aria-hidden="true">→</span>
+</a>
+</div>
+</div>
+</nav>
+<div aria-hidden="true" class="account-page-scene">
+<div class="account-page-bg"></div>
+<div class="account-page-overlay"></div>
+<div class="account-page-orbit orbit-one"></div>
+<div class="account-page-orbit orbit-two"></div>
+</div>
+<div aria-hidden="true" class="petals"></div>
+<main class="account-page-main">
+<section class="account-page-hero compact-account-hero">
+<div class="container">
+<div class="account-page-heading reveal">
+<p class="chapter-label">
+              Klijentski portal · Profil
+            </p>
+<h1>
+              Vaš nalog i podaci
+              <em>na jednom mestu.</em>
+</h1>
+<p>
+              Ažurirajte kontakt podatke, podatke firme i lozinku kojom pristupate projektima i komunikaciji sa agencijom.
+            </p>
+</div>
+</div>
+</section>
+<section class="profile-content-section">
+<div class="container">
+<div class="profile-layout">
+<aside class="profile-sidebar">
+<article class="profile-identity-card liquid-glass reveal">
+<div class="profile-avatar" id="profileAvatar">
+                  K
+                </div>
+<span class="profile-role" id="profileRole">
+                  Korisnik
+                </span>
+<h2 id="profileDisplayName">
+                  Korisnik
+                </h2>
+<p id="profileDisplayEmail">
+                  —
+                </p>
+<div class="profile-identity-meta">
+<div>
+<span>Član od</span>
+<strong id="profileCreatedAt">
+                      —
+                    </strong>
+</div>
+<div>
+<span>Status naloga</span>
+<strong class="profile-active-status">
+                      Aktivan
+                    </strong>
+</div>
+</div>
+</article>
+<nav class="profile-shortcuts liquid-glass reveal delay-1">
+<a href="my-projects.html">
+<span>Moji projekti</span>
+<b>→</b>
+</a>
+<a href="purchase-history.html">
+<span>Istorija kupovina</span>
+<b>→</b>
+</a>
+<a href="cart.html">
+<span>Korpa</span>
+<b>→</b>
+</a>
+</nav>
+</aside>
+<div class="profile-main-column">
+<section class="profile-form-card liquid-glass reveal delay-1">
+<div class="profile-card-heading">
+<div>
+<span>Osnovni podaci</span>
+<h2>Profil korisnika</h2>
+</div>
+<p>
+                    Ime i email se koriste na projektima
+                    i u komunikaciji sa administratorom.
+                  </p>
+</div>
+<form id="profileForm">
+<div class="profile-form-grid">
+<label class="profile-field">
+<span>Ime i prezime</span>
+<input autocomplete="name" id="profileName" maxlength="80" minlength="2" name="name" required="" type="text"/>
+</label>
+<label class="profile-field">
+<span>Email adresa</span>
+<input autocomplete="email" id="profileEmail" maxlength="160" name="email" required="" type="email"/>
+</label>
+<label class="profile-field">
+<span>Naziv firme</span>
+<input autocomplete="organization" id="profileCompany" maxlength="120" name="companyName" placeholder="Nije obavezno" type="text"/>
+</label>
+<label class="profile-field">
+<span>Broj telefona</span>
+<input autocomplete="tel" id="profilePhone" maxlength="40" name="phone" placeholder="+381..." type="tel"/>
+</label>
+</div>
+<div class="profile-form-footer">
+<div aria-live="polite" class="profile-form-status" id="profileStatus" role="status"></div>
+<button class="btn btn-cinematic rounded-pill px-4" id="profileSaveButton" type="submit">
+                      Sačuvaj profil
+                    </button>
+</div>
+</form>
+</section>
+<section class="profile-form-card profile-security-card liquid-glass reveal delay-2">
+<div class="profile-card-heading">
+<div>
+<span>Bezbednost naloga</span>
+<h2>Promena lozinke</h2>
+</div>
+<p>
+                    Nova lozinka mora imati najmanje
+                    8 karaktera, jedno slovo i jedan broj.
+                  </p>
+</div>
+<form id="passwordForm">
+<div class="profile-form-grid password-grid">
+<label class="profile-field">
+<span>Trenutna lozinka</span>
+<input autocomplete="current-password" id="currentPassword" name="currentPassword" required="" type="password"/>
+</label>
+<label class="profile-field">
+<span>Nova lozinka</span>
+<input autocomplete="new-password" id="newPassword" minlength="8" name="newPassword" required="" type="password"/>
+</label>
+<label class="profile-field">
+<span>Potvrdi novu lozinku</span>
+<input autocomplete="new-password" id="confirmPassword" minlength="8" name="confirmPassword" required="" type="password"/>
+</label>
+</div>
+<div class="profile-form-footer">
+<div aria-live="polite" class="profile-form-status" id="passwordStatus" role="status"></div>
+<button class="btn btn-ghost rounded-pill px-4" id="passwordSaveButton" type="submit">
+                      Promeni lozinku
+                    </button>
+</div>
+</form>
+</section>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js?v=9"></script>
+<script src="js/profile.js?v=9"></script>
+<script src="js/unified-navbar.js?v=1"></script></body>
+</html>

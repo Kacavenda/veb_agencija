@@ -1,457 +1,728 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="sr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paketi — Cinematic Agency</title>
-    <meta
-      name="description"
-      content="Paketi za izradu web sajta: Basic, Pro i Premium. Cinematic Agency izrađuje moderne, responzivne i profesionalne sajtove."
-    />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/pricing-style.css" />
-  </head>
-
-  <body class="pricing-page">
-    <nav class="navbar navbar-expand-lg fixed-top cinematic-navbar" id="mainNavbar">
-      <div class="container-fluid px-4 px-lg-5">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-          <span class="logo-mark"><span></span></span>
-          <span>Cinematic Agency</span>
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="index.html">Početna</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Usluge</a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html">Projekti</a></li>
-            <li class="nav-item"><a class="nav-link" href="pricing.html">Paketi</a></li>
-            <li class="nav-item"><a class="nav-link" href="process.html">Kako radimo</a></li>
-          </ul>
-
-          <a class="btn btn-cinematic rounded-pill px-4" href="auth.html">Započni projekat</a>
-        </div>
-      </div>
-    </nav>
-
-    <aside class="story-progress d-none d-xl-flex" aria-label="Story progress">
-      <a href="#pricing-hero"><span>01</span><small>Hero</small></a>
-      <a href="#pricing-packages"><span>02</span><small>Paketi</small></a>
-      <a href="#pricing-compare"><span>03</span><small>Poređenje</small></a>
-      <a href="#pricing-process"><span>04</span><small>Proces</small></a>
-      <a href="#pricing-contact"><span>05</span><small>Kontakt</small></a>
-      <div class="progress-line"><span id="scrollProgress"></span></div>
-    </aside>
-
-    <div class="petals" aria-hidden="true"></div>
-
-    <main>
-      <!-- HERO -->
-      <section class="story-section pricing-section pricing-hero" id="pricing-hero" data-bg="assets/hero-scene.png">
-        <div class="section-bg"></div>
-        <div class="section-overlay"></div>
-
-        <div class="container">
-          <div class="row min-vh-100 align-items-center">
-            <div class="col-lg-6 col-xl-5 reveal">
-              <span class="hero-eyebrow">
-                <span class="dot"></span>
-                Chapter 01 · Paketi
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Paketi — Web Design Agency</title>
+<meta content="Uporedite Basic, Pro i Premium pakete za izradu poslovnog web sajta, landing stranice ili naprednog web sistema." name="description"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css?v=12" rel="stylesheet"/>
+<link href="css/pricing-redesign.css?v=1" rel="stylesheet"/>
+<link href="css/main-pages-scroll.css?v=1" rel="stylesheet"/><link href="css/unified-navbar.css?v=2" rel="stylesheet"/><link href="css/site-responsive.css?v=1" rel="stylesheet"/></head>
+<body class="pricing-redesign">
+<nav class="navbar navbar-expand-lg fixed-top cinematic-navbar site-unified-navbar" id="mainNavbar">
+<div class="container">
+<a aria-label="Web Design Agency početna" class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+<span class="logo-mark"><span></span></span>
+<span>Web Design Agency</span>
+</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Otvori navigaciju" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link" href="index.html">Početna</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="services.html">Usluge</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="projects.html">Projekti</a>
+</li>
+<li class="nav-item">
+<a aria-current="page" class="nav-link active" href="pricing.html">Paketi</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="process.html">Kako radimo</a>
+</li>
+</ul>
+<a class="btn btn-cinematic rounded-pill px-4 site-auth-button" href="auth.html">
+            Login / Register
+            <span aria-hidden="true">→</span>
+</a>
+</div>
+</div>
+</nav><aside aria-label="Navigacija kroz stranicu" class="main-page-side-nav d-none d-xl-flex">
+<a class="active" href="#pricing-home">
+<span>01</span>
+<small>Uvod</small>
+</a>
+<a class="" href="#pricing-packages">
+<span>02</span>
+<small>Paketi</small>
+</a>
+<a class="" href="#pricing-compare">
+<span>03</span>
+<small>Poređenje</small>
+</a>
+<a class="" href="#pricing-guidance">
+<span>04</span>
+<small>Izbor</small>
+</a>
+<a class="" href="#pricing-process">
+<span>05</span>
+<small>Proces</small>
+</a>
+<a class="" href="#pricing-contact">
+<span>06</span>
+<small>Pro</small>
+</a>
+<div class="main-page-side-progress">
+<span></span>
+</div>
+</aside>
+<div aria-hidden="true" class="pricing-ambient">
+<span class="pricing-orb pricing-orb-one"></span>
+<span class="pricing-orb pricing-orb-two"></span>
+<span class="pricing-grid"></span>
+<div class="pricing-stars">
+<i></i><i></i><i></i><i></i><i></i><i></i>
+<i></i><i></i><i></i><i></i><i></i><i></i>
+</div>
+</div>
+<div aria-hidden="true" class="petals pricing-petals"></div>
+<main>
+<section class="pricing-hero" id="pricing-home">
+<div class="pricing-hero-bg"></div>
+<div class="pricing-hero-shade"></div>
+<div class="pricing-hero-glow"></div>
+<div class="container position-relative">
+<div class="row align-items-center min-vh-100">
+<div class="col-lg-7 col-xl-6">
+<div class="pricing-hero-copy reveal">
+<span class="pricing-kicker">
+<span></span>
+                Paketi za različite faze poslovanja
               </span>
-
-              <h1>Paketi za sajt koji deluje <em>ozbiljno.</em></h1>
-
-              <p class="hero-text">
-                Izaberi obim koji odgovara tvom cilju: jednostavan poslovni sajt,
-                napredniji web nastup ili custom digitalno iskustvo.
+<h1>
+                Izaberite obim koji odgovara
+                <em>vašem projektu.</em>
+</h1>
+<p>
+                Jasno definisani paketi pomažu da unapred znate šta dobijate,
+                koliko traje izrada i koji nivo rešenja odgovara cilju vašeg
+                biznisa.
               </p>
-
-              <div class="hero-cta">
-                <a href="#pricing-packages" class="btn btn-ice btn-lg rounded-pill">Pogledaj pakete</a>
-                <a href="#pricing-contact" class="btn btn-ghost btn-lg rounded-pill">Zatraži procenu</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PACKAGES -->
-      <section class="story-section pricing-section pricing-packages" id="pricing-packages" data-bg="assets/value-scene.png">
-        <div class="section-bg"></div>
-        <div class="section-overlay"></div>
-
-        <div class="container">
-          <div class="section-head text-center reveal">
-            <span class="chapter-label center">Chapter 02 · Izaberi paket</span>
-            <h2>Tri paketa. Jedan cilj: <em>profesionalan nastup.</em></h2>
-            <p>
-              Paketi su napravljeni tako da znaš šta dobijaš, koliko traje izrada i
-              koji nivo sajta odgovara tvom biznisu.
-            </p>
-          </div>
-
-          <div class="row g-4 align-items-stretch pricing-packages-row">
-            <div class="col-md-6 col-lg-4 d-flex reveal">
-              <div class="liquid-glass price-card w-100">
-                <h3>Basic</h3>
-
-                <div class="price">
-                  <strong>300€</strong>
-                  <span>jednokratno</span>
-                </div>
-
-                <p>Za jednostavan, čist i profesionalan poslovni sajt.</p>
-
-                <ul>
-                  <li>Do 5 sekcija</li>
-                  <li>Responsive dizajn</li>
-                  <li>Kontakt forma</li>
-                  <li>Basic SEO struktura</li>
-                  <li>Rok do 7 radnih dana</li>
-                </ul>
-
-                <button class="btn btn-ghost w-100 rounded-pill order-btn" data-package="Paket Basic">
+<div class="pricing-hero-actions">
+<a class="btn btn-cinematic btn-lg rounded-pill" href="#pricing-packages">
+                  Uporedi pakete
+                  <span>↓</span>
+</a>
+<a class="btn btn-ghost btn-lg rounded-pill" href="#pricing-contact">
+                  Zatraži procenu
+                  <span>↗</span>
+</a>
+</div>
+<div class="pricing-trust-row">
+<span>
+<b>✓</b>
+                  Jednokratna cena
+                </span>
+<span>
+<b>✓</b>
+                  Definisan obim i rok
+                </span>
+<span>
+<b>✓</b>
+                  Podrška nakon isporuke
+                </span>
+</div>
+</div>
+</div>
+</div>
+<div class="pricing-metrics glass-panel reveal delay-2">
+<article>
+<span class="metric-symbol">03</span>
+<strong>Jasna paketa</strong>
+<small>Basic, Pro i Premium</small>
+</article>
+<article>
+<span class="metric-symbol">300€</span>
+<strong>Početna cena</strong>
+<small>za profesionalan prvi sajt</small>
+</article>
+<article>
+<span class="metric-symbol">7–14</span>
+<strong>Radnih dana</strong>
+<small>u zavisnosti od obima</small>
+</article>
+<article>
+<span class="metric-symbol">100%</span>
+<strong>Responsive</strong>
+<small>telefon, tablet i desktop</small>
+</article>
+</div>
+</div>
+</section>
+<section aria-label="Karakteristike paketa" class="pricing-marquee">
+<div class="pricing-marquee-track">
+<span>Jasna ponuda</span><i>✦</i>
+<span>Responsive dizajn</span><i>✦</i>
+<span>Kontakt forme</span><i>✦</i>
+<span>SEO osnova</span><i>✦</i>
+<span>Animacije</span><i>✦</i>
+<span>Web funkcionalnosti</span><i>✦</i>
+<span>Korisnički portal</span><i>✦</i>
+<span>Podrška</span><i>✦</i>
+<span>Jasna ponuda</span><i>✦</i>
+<span>Responsive dizajn</span><i>✦</i>
+<span>Kontakt forme</span><i>✦</i>
+<span>SEO osnova</span><i>✦</i>
+<span>Animacije</span><i>✦</i>
+<span>Web funkcionalnosti</span><i>✦</i>
+<span>Korisnički portal</span><i>✦</i>
+<span>Podrška</span><i>✦</i>
+</div>
+</section>
+<section class="pricing-section pricing-packages-section" id="pricing-packages">
+<div aria-hidden="true" class="packages-section-glow"></div>
+<div class="container position-relative">
+<div class="pricing-section-heading text-center reveal">
+<span>Izaberite paket</span>
+<h2>
+            Tri nivoa usluge.
+            <em>Jedan jasan cilj.</em>
+</h2>
+<p>
+            Svaki paket pokriva drugačiji nivo obima, dizajna i
+            funkcionalnosti. Detalje možete otvoriti pre izbora.
+          </p>
+</div>
+<div class="pricing-package-grid">
+<article class="pricing-package-card basic-card reveal">
+<div class="package-image" style="--package-image: url('../assets/pricing-basic-scene.png')">
+<span class="package-index">01</span>
+<div class="package-image-label">
+<small>Za prvi ozbiljan web nastup</small>
+<strong>Basic</strong>
+</div>
+</div>
+<div class="package-content">
+<div class="package-heading">
+<div>
+<span>Basic paket</span>
+<h3>Jasan početak za mali biznis.</h3>
+</div>
+<div class="package-price">
+<strong>300€</strong>
+<small>jednokratno</small>
+</div>
+</div>
+<p>
+                Za firme, preduzetnike i lične brendove kojima je potreban
+                profesionalan, pregledan i brz poslovni sajt.
+              </p>
+<ul>
+<li>Do 5 stranica ili glavnih sekcija</li>
+<li>Responsive dizajn</li>
+<li>Kontakt forma</li>
+<li>Osnovna SEO struktura</li>
+<li>Jedan krug manjih korekcija</li>
+</ul>
+<div class="package-best-for">
+<span>Najbolje za:</span>
+<b>Lokalne firme · Freelancere · Početni nastup</b>
+</div>
+<div class="package-actions">
+<a class="btn btn-ghost rounded-pill" href="package-basic.html">
+                  Detalji paketa
+                  <span>→</span>
+</a>
+<button class="btn btn-cinematic rounded-pill order-btn" data-package="Paket Basic" type="button">
                   Izaberi Basic
-                </button>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 d-flex reveal delay-1">
-              <div class="liquid-glass price-card popular w-100">
-                <span class="popular-badge">Najpopularniji</span>
-
-                <h3>Pro</h3>
-
-                <div class="price">
-                  <strong>500€</strong>
-                  <span>jednokratno</span>
-                </div>
-
-                <p>Najbolji odnos obima, dizajna, animacija i roka.</p>
-
-                <ul>
-                  <li>Više stranica</li>
-                  <li>Napredniji dizajn</li>
-                  <li>Animacije i interakcije</li>
-                  <li>Portfolio / usluge / kontakt</li>
-                  <li>Rok do 10 radnih dana</li>
-                </ul>
-
-                <button class="btn btn-cinematic w-100 rounded-pill order-btn" data-package="Paket Pro">
-                  Izaberi Pro
-                </button>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 d-flex reveal delay-2">
-              <div class="liquid-glass price-card w-100">
-                <h3>Premium</h3>
-
-                <div class="price">
-                  <strong>Dogovor</strong>
-                </div>
-
-                <p>Za custom animacije, veći obim i ozbiljniji digitalni sistem.</p>
-
-                <ul>
-                  <li>Custom scrollytelling layout</li>
-                  <li>Napredne animacije</li>
-                  <li>AI procena zahteva</li>
-                  <li>Queue sistem priprema</li>
-                  <li>Dashboard priprema</li>
-                </ul>
-
-                <button class="btn btn-ghost w-100 rounded-pill order-btn" data-package="Paket Premium">
-                  Zakaži konsultacije
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div id="orderStatus" class="form-status mt-4"></div>
-        </div>
-      </section>
-
-      <!-- COMPARE -->
-      <section class="story-section pricing-section pricing-compare" id="pricing-compare" data-bg="assets/services-scene.png">
-        <div class="section-bg"></div>
-        <div class="section-overlay"></div>
-
-        <div class="container">
-          <div class="section-head text-center reveal">
-            <span class="chapter-label center">Chapter 03 · Poređenje</span>
-
-            <h2>Kako da znaš koji paket je <em>za tebe?</em></h2>
-
-            <p>
-              Svaki paket ima drugačiji obim. Basic je za osnovno prisustvo,
-              Pro je za ozbiljniji nastup, a Premium je za custom iskustva i veći obim.
-            </p>
-          </div>
-
-          <div class="row g-4 align-items-stretch pricing-compare-row">
-            <div class="col-md-6 col-lg-4 d-flex reveal">
-              <article class="liquid-glass pricing-compare-card w-100">
-                <span class="compare-number">01</span>
-
-                <h3>Basic</h3>
-
-                <p>
-                  Najbolji za firme koje žele brz, moderan i pregledan sajt bez previše kompleksnosti.
-                </p>
-
-                <ul>
-                  <li>Jednostavan poslovni sajt</li>
-                  <li>Osnovne sekcije</li>
-                  <li>Kontakt forma</li>
-                  <li>Brza izrada</li>
-                </ul>
-              </article>
-            </div>
-
-            <div class="col-md-6 col-lg-4 d-flex reveal delay-1">
-              <article class="liquid-glass pricing-compare-card active w-100">
-                <span class="compare-badge">Najbolji izbor</span>
-                <span class="compare-number">02</span>
-
-                <h3>Pro</h3>
-
-                <p>
-                  Najbolji za ozbiljniji nastup, više sekcija, bolji flow, animacije i jači prvi utisak.
-                </p>
-
-                <ul>
-                  <li>Više stranica</li>
-                  <li>Napredniji dizajn</li>
-                  <li>Bolja struktura sadržaja</li>
-                  <li>Profesionalniji utisak</li>
-                </ul>
-              </article>
-            </div>
-
-            <div class="col-md-6 col-lg-4 d-flex reveal delay-2">
-              <article class="liquid-glass pricing-compare-card w-100">
-                <span class="compare-number">03</span>
-
-                <h3>Premium</h3>
-
-                <p>
-                  Najbolji za projekte koji traže custom dizajn, scrollytelling i napredniju strukturu.
-                </p>
-
-                <ul>
-                  <li>Custom iskustvo</li>
-                  <li>Scrollytelling sekcije</li>
-                  <li>Naprednije animacije</li>
-                  <li>Veći obim projekta</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROCESS -->
-      <section class="story-section pricing-section pricing-process" id="pricing-process" data-bg="assets/showcase-scene.png">
-        <div class="section-bg"></div>
-        <div class="section-overlay stronger"></div>
-
-        <div class="container">
-          <div class="section-head text-center reveal">
-            <span class="chapter-label center">Chapter 04 · Nakon izbora paketa</span>
-
-            <h2>Šta se dešava kada izabereš <em>paket?</em></h2>
-
-            <p>
-              Proces ostaje isti kao na početnoj: prvo razumemo cilj, zatim definišemo
-              strukturu i krećemo u dizajn i razvoj.
-            </p>
-          </div>
-
-          <div class="timeline reveal delay-1">
-            <div class="step">
-              <span>01</span>
-              <h3>Upit</h3>
-              <p>Pošalješ osnovne informacije o projektu.</p>
-            </div>
-
-            <div class="step">
-              <span>02</span>
-              <h3>Procena</h3>
-              <p>Proveravamo obim, rok i da li paket odgovara cilju.</p>
-            </div>
-
-            <div class="step">
-              <span>03</span>
-              <h3>Plan</h3>
-              <p>Definišemo sekcije, sadržaj i vizuelni pravac.</p>
-            </div>
-
-            <div class="step">
-              <span>04</span>
-              <h3>Izrada</h3>
-              <p>Kodiramo frontend i pripremamo funkcionalnosti.</p>
-            </div>
-
-            <div class="step">
-              <span>05</span>
-              <h3>Isporuka</h3>
-              <p>Testiranje, optimizacija i priprema za objavu.</p>
-            </div>
-          </div>
-
-          <div class="row g-3 mt-5">
-            <div class="col-md-3 reveal"><div class="feature-chip">Jasan obim</div></div>
-            <div class="col-md-3 reveal delay-1"><div class="feature-chip">Rok izrade</div></div>
-            <div class="col-md-3 reveal delay-2"><div class="feature-chip">Plan sekcija</div></div>
-            <div class="col-md-3 reveal delay-3"><div class="feature-chip">Finalna isporuka</div></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section class="story-section pricing-section pricing-contact" id="pricing-contact" data-bg="assets/contact-scene.png">
-        <div class="section-bg"></div>
-        <div class="section-overlay"></div>
-
-        <div class="container">
-          <div class="row min-vh-100 align-items-center g-5">
-            <div class="col-lg-5 reveal">
-              <span class="chapter-label">Chapter 05 · Procena</span>
-
-              <h2>Nisi siguran koji paket ti <em>odgovara?</em></h2>
-
-              <p class="section-copy">
-                Pošalji kratak opis projekta i predložićemo paket koji ima najviše
-                smisla za tvoj cilj, rok i budžet.
+                  <span>↗</span>
+</button>
+</div>
+</div>
+</article>
+<article class="pricing-package-card pro-card featured reveal delay-1" id="pro-package">
+<span class="featured-package-badge">
+              Najpopularniji izbor
+            </span>
+<div class="package-image" style="--package-image: url('../assets/pricing-pro-scene.png')">
+<span class="package-index">02</span>
+<div class="package-image-label">
+<small>Za jači digitalni nastup</small>
+<strong>Pro</strong>
+</div>
+</div>
+<div class="package-content">
+<div class="package-heading">
+<div>
+<span>Pro paket</span>
+<h3>Više sadržaja, animacija i mogućnosti.</h3>
+</div>
+<div class="package-price">
+<strong>500€</strong>
+<small>jednokratno</small>
+</div>
+</div>
+<p>
+                Za poslovanja kojima je potreban ozbiljniji sajt sa više
+                stranica, upečatljivijim dizajnom i naprednijim sadržajem.
               </p>
-
-              <div class="contact-benefits">
-                <span>Bez obaveze</span>
-                <span>Jasan predlog</span>
-                <span>Brz odgovor</span>
-              </div>
-            </div>
-
-            <div class="col-lg-7 reveal delay-1">
-              <form class="contact-form" id="pricingForm">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <input class="form-control" name="name" placeholder="Ime i prezime" required />
-                  </div>
-
-                  <div class="col-md-6">
-                    <input class="form-control" name="email" type="email" placeholder="Email" required />
-                  </div>
-
-                  <div class="col-12">
-                    <input class="form-control" name="websiteType" placeholder="Tip sajta / paket koji te zanima" />
-                  </div>
-
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="5" placeholder="Poruka" required></textarea>
-                  </div>
-                </div>
-
-                <button class="btn btn-cinematic w-100 rounded-pill mt-4" type="submit">
-                  Pošalji upit
-                </button>
-
-                <div id="pricingFormStatus" class="form-status mt-3"></div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer-section">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <h3 class="d-flex align-items-center gap-2">
-              <span class="logo-mark"><span></span></span> Cinematic Agency
-            </h3>
-
-            <p class="brand-blurb mt-3">
-              Kreiramo moderne web sajtove i digitalna iskustva koja ostavljaju utisak.
+<ul>
+<li>Više povezanih stranica</li>
+<li>Napredniji vizuelni sistem</li>
+<li>Animacije i interakcije</li>
+<li>Portfolio, usluge i kontakt</li>
+<li>Dva kruga korekcija</li>
+</ul>
+<div class="package-best-for">
+<span>Najbolje za:</span>
+<b>Firme u rastu · Kampanje · Jači brend nastup</b>
+</div>
+<div class="package-actions">
+<a class="btn btn-ghost rounded-pill" href="package-pro.html">
+                  Detalji paketa
+                  <span>→</span>
+</a>
+<button class="btn btn-cinematic rounded-pill order-btn" data-package="Paket Pro" type="button">
+                  Izaberi Pro
+                  <span>↗</span>
+</button>
+</div>
+</div>
+</article>
+<article class="pricing-package-card premium-card reveal delay-2">
+<div class="package-image" style="--package-image: url('../assets/pricing-premium-scene.png')">
+<span class="package-index">03</span>
+<div class="package-image-label">
+<small>Za rešenje po meri</small>
+<strong>Premium</strong>
+</div>
+</div>
+<div class="package-content">
+<div class="package-heading">
+<div>
+<span>Premium paket</span>
+<h3>Napredan sistem prilagođen vašem procesu.</h3>
+</div>
+<div class="package-price">
+<strong>800€</strong>
+<small>početna cena</small>
+</div>
+</div>
+<p>
+                Za projekte sa posebnim funkcionalnostima, korisničkim
+                nalozima, integracijama i složenijim korisničkim tokom.
+              </p>
+<ul>
+<li>Dizajn i struktura po meri</li>
+<li>Napredne funkcionalnosti</li>
+<li>Korisnički i admin panel</li>
+<li>Integracije i automatizacija</li>
+<li>Proširena podrška</li>
+</ul>
+<div class="package-best-for">
+<span>Najbolje za:</span>
+<b>Web sisteme · Portale · Specifične procese</b>
+</div>
+<div class="package-actions">
+<a class="btn btn-ghost rounded-pill" href="package-premium.html">
+                  Detalji paketa
+                  <span>→</span>
+</a>
+<button class="btn btn-cinematic rounded-pill order-btn" data-package="Paket Premium" type="button">
+                  Izaberi Premium
+                  <span>↗</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<div aria-live="polite" class="order-status" id="orderStatus" role="status"></div>
+</div>
+</section>
+<section class="pricing-section pricing-comparison-section" id="pricing-compare">
+<div aria-hidden="true" class="comparison-scene"></div>
+<div class="container position-relative">
+<div class="pricing-section-heading reveal">
+<span>Direktno poređenje</span>
+<h2>
+            Pogledajte šta dobijate
+            <em>u svakom paketu.</em>
+</h2>
+<p>
+            Poređenje prikazuje osnovni obim. Konačna ponuda se potvrđuje
+            nakon što definišemo sadržaj, rok i potrebne funkcionalnosti.
+          </p>
+</div>
+<div class="comparison-table-wrap reveal delay-1">
+<div class="comparison-table">
+<div class="comparison-row comparison-head">
+<div>Funkcionalnost</div>
+<div>Basic</div>
+<div class="highlighted">Pro</div>
+<div>Premium</div>
+</div>
+<div class="comparison-row">
+<div>Broj stranica</div>
+<div>Do 5</div>
+<div class="highlighted">Više stranica</div>
+<div>Po zahtevu</div>
+</div>
+<div class="comparison-row">
+<div>Responsive dizajn</div>
+<div><span class="check">✓</span></div>
+<div class="highlighted"><span class="check">✓</span></div>
+<div><span class="check">✓</span></div>
+</div>
+<div class="comparison-row">
+<div>Kontakt forma</div>
+<div><span class="check">✓</span></div>
+<div class="highlighted"><span class="check">✓</span></div>
+<div><span class="check">✓</span></div>
+</div>
+<div class="comparison-row">
+<div>Animacije i interakcije</div>
+<div>Osnovne</div>
+<div class="highlighted">Naprednije</div>
+<div>Po meri</div>
+</div>
+<div class="comparison-row">
+<div>SEO struktura</div>
+<div>Osnovna</div>
+<div class="highlighted">Proširena</div>
+<div>Po projektu</div>
+</div>
+<div class="comparison-row">
+<div>Korisnički nalozi</div>
+<div><span class="dash">—</span></div>
+<div class="highlighted">Opcionalno</div>
+<div><span class="check">✓</span></div>
+</div>
+<div class="comparison-row">
+<div>Admin panel</div>
+<div><span class="dash">—</span></div>
+<div class="highlighted">Opcionalno</div>
+<div><span class="check">✓</span></div>
+</div>
+<div class="comparison-row">
+<div>Integracije</div>
+<div>Osnovne</div>
+<div class="highlighted">Odabrane</div>
+<div>Napredne</div>
+</div>
+<div class="comparison-row">
+<div>Podrška nakon objave</div>
+<div>7 dana</div>
+<div class="highlighted">14 dana</div>
+<div>30 dana</div>
+</div>
+</div>
+</div>
+<div class="comparison-actions reveal delay-2">
+<a class="btn btn-ghost rounded-pill" href="services.html">
+            Pogledaj sve usluge
+            <span>→</span>
+</a>
+<a class="btn btn-cinematic rounded-pill" href="#pricing-contact">
+            Nisam siguran koji paket
+            <span>↗</span>
+</a>
+</div>
+</div>
+</section>
+<section class="pricing-section pricing-guidance-section" id="pricing-guidance">
+<div aria-hidden="true" class="guidance-scene"></div>
+<div class="container position-relative">
+<div class="pricing-section-heading text-center reveal">
+<span>Kako da izaberete</span>
+<h2>
+            Pođite od cilja, ne samo od
+            <em>broja stranica.</em>
+</h2>
+</div>
+<div class="guidance-grid">
+<article class="guidance-card reveal">
+<span>01</span>
+<div class="guidance-icon">◫</div>
+<h3>Basic</h3>
+<p>
+              Izaberite ga kada vam je potreban jasan prvi sajt koji
+              predstavlja firmu, usluge i kontakt informacije.
             </p>
-          </div>
-
-          <div class="col-6 col-lg-2">
-            <h4>Navigacija</h4>
-            <a href="index.html">Početna</a>
-            <a href="index.html#value">O nama</a>
-            <a href="services.html">Usluge</a>
-            <a href="projects.html">Projekti</a>
-          </div>
-
-          <div class="col-6 col-lg-3">
-            <h4>Paketi</h4>
-            <a href="#pricing-packages">Basic</a>
-            <a href="#pricing-packages">Pro</a>
-            <a href="#pricing-packages">Premium</a>
-            <a href="#pricing-contact">Procena</a>
-          </div>
-
-          <div class="col-lg-3">
-            <h4>Kontakt</h4>
-            <a href="mailto:info@cinematic.rs">info@cinematic.rs</a>
-            <a href="#pricing-contact">Instagram</a>
-            <a href="#pricing-contact">Novi Sad, Srbija</a>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <span>© 2026 Cinematic Agency. Sva prava zadržana.</span>
-          <span>Izrađeno sa HTML · CSS · Bootstrap · Node.js</span>
-        </div>
-      </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-
-    <script>
-      (function () {
-        const form = document.getElementById("pricingForm");
-        const status = document.getElementById("pricingFormStatus");
-
-        if (!form || !status) return;
-
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
-          status.textContent =
-            "Hvala! Upit je primljen. Javljamo se uskoro sa predlogom paketa.";
-          form.reset();
-        });
-      })();
-    </script>
-  </body>
+<a href="package-basic.html">Otvori Basic →</a>
+</article>
+<article class="guidance-card featured reveal delay-1">
+<span>02</span>
+<div class="guidance-icon">✦</div>
+<h3>Pro</h3>
+<p>
+              Izaberite ga kada sadržaj, portfolio, animacije i vizuelni
+              identitet imaju veću ulogu u prodaji usluge.
+            </p>
+<a href="package-pro.html">Otvori Pro →</a>
+</article>
+<article class="guidance-card reveal delay-2">
+<span>03</span>
+<div class="guidance-icon">&lt;/&gt;</div>
+<h3>Premium</h3>
+<p>
+              Izaberite ga kada projekat zahteva posebnu logiku, naloge,
+              automatizaciju, integracije ili administratorski sistem.
+            </p>
+<a href="package-premium.html">Otvori Premium →</a>
+</article>
+</div>
+</div>
+</section>
+<section class="pricing-section pricing-process-section" id="pricing-process">
+<div aria-hidden="true" class="pricing-process-scene"></div>
+<div class="container position-relative">
+<div class="pricing-section-heading text-center reveal">
+<span>Nakon izbora paketa</span>
+<h2>
+            Šta se dešava
+            <em>posle kupovine?</em>
+</h2>
+<p>
+            Paket određuje početni obim, a korisnički portal vodi vas kroz
+            sve naredne korake do isporuke projekta.
+          </p>
+</div>
+<div class="pricing-process-line">
+<article class="pricing-process-stage reveal">
+<span class="stage-icon">01</span>
+<h3>Izbor paketa</h3>
+<p>Otvarate detalje, podešavate opcije i dodajete paket u korpu.</p>
+</article>
+<article class="pricing-process-stage reveal delay-1">
+<span class="stage-icon">02</span>
+<h3>Prijava i plaćanje</h3>
+<p>Prijavljujete se i završavate kupovinu kroz PayPal Sandbox.</p>
+</article>
+<article class="pricing-process-stage reveal delay-2">
+<span class="stage-icon">03</span>
+<h3>Otvaranje projekta</h3>
+<p>Nakon potvrde plaćanja projekat se automatski kreira.</p>
+</article>
+<article class="pricing-process-stage reveal delay-3">
+<span class="stage-icon">04</span>
+<h3>Slanje materijala</h3>
+<p>Dodajete tekst, logo, fotografije, dokumente i napomene.</p>
+</article>
+<article class="pricing-process-stage reveal">
+<span class="stage-icon">05</span>
+<h3>Realizacija</h3>
+<p>Pratite status, razmenjujete poruke i dobijate finalni sajt.</p>
+</article>
+</div>
+<div class="pricing-process-actions reveal delay-2">
+<a class="btn btn-ghost rounded-pill" href="process.html">
+            Detaljno kako radimo
+            <span>→</span>
+</a>
+<a class="btn btn-cinematic rounded-pill" href="auth.html">
+            Otvori korisnički nalog
+            <span>→</span>
+</a>
+</div>
+</div>
+</section>
+<section class="pricing-section pricing-faq-section">
+<div class="container position-relative">
+<div class="pricing-faq-layout">
+<div class="pricing-section-heading reveal">
+<span>Najčešća pitanja</span>
+<h2>
+              Važne informacije
+              <em>pre izbora.</em>
+</h2>
+<p>
+              Paket je početna osnova. Pre realizacije potvrđujemo tačan
+              sadržaj, funkcionalnosti, rok i obim korekcija.
+            </p>
+<a class="btn btn-ghost rounded-pill" href="projects.html">
+              Pogledaj primere projekata
+              <span>→</span>
+</a>
+</div>
+<div class="accordion pricing-accordion" id="pricingAccordion">
+<div class="accordion-item reveal">
+<h3 class="accordion-header">
+<button aria-controls="pricingFaqOne" aria-expanded="true" class="accordion-button" data-bs-target="#pricingFaqOne" data-bs-toggle="collapse" type="button">
+                  Da li je cena paketa konačna?
+                </button>
+</h3>
+<div class="accordion-collapse collapse show" data-bs-parent="#pricingAccordion" id="pricingFaqOne">
+<div class="accordion-body">
+                  Cena pokriva navedeni osnovni obim. Dodatne stranice,
+                  funkcionalnosti, integracije ili složenije animacije
+                  menjaju konačnu cenu i potvrđuju se pre početka rada.
+                </div>
+</div>
+</div>
+<div class="accordion-item reveal delay-1">
+<h3 class="accordion-header">
+<button aria-controls="pricingFaqTwo" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#pricingFaqTwo" data-bs-toggle="collapse" type="button">
+                  Mogu li kasnije proširiti paket?
+                </button>
+</h3>
+<div class="accordion-collapse collapse" data-bs-parent="#pricingAccordion" id="pricingFaqTwo">
+<div class="accordion-body">
+                  Da. Projekat može kasnije dobiti nove stranice,
+                  funkcionalnosti, korisničke naloge, integracije ili
+                  mesečno održavanje.
+                </div>
+</div>
+</div>
+<div class="accordion-item reveal delay-2">
+<h3 class="accordion-header">
+<button aria-controls="pricingFaqThree" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#pricingFaqThree" data-bs-toggle="collapse" type="button">
+                  Da li su domen i hosting uključeni?
+                </button>
+</h3>
+<div class="accordion-collapse collapse" data-bs-parent="#pricingAccordion" id="pricingFaqThree">
+<div class="accordion-body">
+                  Domen i hosting se biraju prema projektu i nisu deo
+                  osnovne cene paketa, osim kada su posebno navedeni u
+                  konačnoj ponudi.
+                </div>
+</div>
+</div>
+<div class="accordion-item reveal delay-3">
+<h3 class="accordion-header">
+<button aria-controls="pricingFaqFour" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#pricingFaqFour" data-bs-toggle="collapse" type="button">
+                  Šta se dešava ako nisam siguran koji paket mi treba?
+                </button>
+</h3>
+<div class="accordion-collapse collapse" data-bs-parent="#pricingAccordion" id="pricingFaqFour">
+<div class="accordion-body">
+                  Pošaljite opis projekta kroz formu ispod. Na osnovu
+                  cilja, sadržaja i funkcionalnosti preporučićemo paket
+                  ili pripremiti prilagođenu ponudu.
+                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="pricing-section pricing-contact-section" id="pricing-contact">
+<div aria-hidden="true" class="pricing-contact-scene"></div>
+<div class="container position-relative">
+<div class="pricing-contact-layout">
+<div class="pricing-contact-copy reveal">
+<span>Najpopularniji izbor</span>
+<h2>
+        Pro paket je najbolji odnos <em>obima i mogućnosti.</em>
+</h2>
+<p>
+        Dobijate profesionalan sajt sa više stranica, snažnijim vizuelnim identitetom, animacijama i prostorom za ozbiljnije predstavljanje poslovanja.
+      </p>
+<div class="pricing-contact-links">
+<a href="services.html">
+<b>Usluge</b>
+<small>Pogledajte šta razvijamo</small>
+<span>→</span>
+</a>
+<a href="projects.html">
+<b>Projekti</b>
+<small>Pogledajte prethodne radove</small>
+<span>→</span>
+</a>
+<a href="process.html">
+<b>Proces</b>
+<small>Saznajte kako sarađujemo</small>
+<span>→</span>
+</a>
+</div>
+</div>
+<article class="featured-pro-card glass-panel reveal delay-1" style="--pro-accent:#ff5f8f;--pro-accent-2:#9468ff;--pro-soft:rgba(255, 95, 143, 0.15);--pro-border:rgba(255, 95, 143, 0.36);">
+<div class="featured-pro-visual">
+<img alt="Pro paket za napredniji poslovni web sajt" src="assets/pro-package-scene.png"/>
+<span class="featured-pro-index">02</span>
+<span class="featured-pro-badge">Najpopularniji izbor</span>
+<div class="featured-pro-visual-copy">
+<small>Za jači digitalni nastup</small>
+<strong>Pro</strong>
+</div>
+</div>
+<div class="featured-pro-body">
+<div class="featured-pro-heading">
+<div>
+<span>Pro paket</span>
+<h3>Više sadržaja, animacija i mogućnosti.</h3>
+</div>
+<div class="featured-pro-price">
+<strong>500€</strong>
+<small>jednokratno</small>
+</div>
+</div>
+<p>
+          Za poslovanja kojima je potreban ozbiljniji sajt sa više
+          stranica, upečatljivijim dizajnom i naprednijim sadržajem.
+        </p>
+<ul>
+<li>Više povezanih stranica</li>
+<li>Napredniji vizuelni sistem</li>
+<li>Animacije i interakcije</li>
+<li>Portfolio, usluge i kontakt</li>
+<li>Dva kruga korekcija</li>
+</ul>
+<div class="featured-pro-best">
+<span>Najbolje za:</span>
+<b>Firme u rastu · Kampanje · Jači brend nastup</b>
+</div>
+<div class="featured-pro-actions">
+<a class="btn btn-ghost rounded-pill" href="package-pro.html">
+            Detalji paketa
+            <span>→</span>
+</a>
+<button class="btn btn-cinematic rounded-pill order-btn" data-package="Paket Pro" type="button">
+            Izaberi Pro
+            <span>↗</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer class="pricing-footer">
+<div class="container">
+<div class="pricing-footer-main">
+<div>
+<a class="navbar-brand d-inline-flex align-items-center gap-2" href="index.html">
+<span class="logo-mark">
+<span></span>
+</span>
+<span>Web Design Agency</span>
+</a>
+<p>
+            Jasno definisani paketi za poslovne sajtove, landing stranice,
+            redizajn i napredne web sisteme.
+          </p>
+</div>
+<nav aria-label="Footer navigacija">
+<a href="index.html">Početna</a>
+<a href="services.html">Usluge</a>
+<a href="projects.html">Projekti</a>
+<a href="pricing.html">Paketi</a>
+<a href="process.html">Kako radimo</a>
+<a href="auth.html">Korisnički nalog</a>
+</nav>
+</div>
+<div class="pricing-footer-bottom">
+<span>© 2026 Web Design Agency</span>
+<div>
+<a href="#pricing-contact">Kontakt</a>
+<a href="cart.html">Korpa</a>
+<a href="auth.html">Prijava</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js?v=12"></script>
+<script src="js/pricing-effects.js?v=1"></script>
+<script src="js/main-pages-scroll.js?v=1"></script><script src="js/unified-navbar.js?v=1"></script></body>
 </html>
